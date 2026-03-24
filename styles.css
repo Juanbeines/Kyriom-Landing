@@ -379,12 +379,8 @@ img { max-width: 100%; display: block; }
 .hero .container {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
 }
-.hero-content { max-width: none; }
+.hero-content { max-width: 780px; }
 .hero-visual {
     display: flex;
     flex-direction: column;
