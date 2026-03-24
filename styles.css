@@ -1292,3 +1292,13 @@ img { max-width: 100%; display: block; }
     .servicios-grid { grid-template-columns: 1fr; }
     .form-grid-2 { grid-template-columns: 1fr; }
 }
+
+/* ========== ICONS ========== */
+.icon {
+    display: inline-block;
+    flex-shrink: 0;
+}
+/* Invert icons in dark mode to make them visible */
+.dark .icon-adaptive {
+    filter: brightness(0) invert(1);
+}
