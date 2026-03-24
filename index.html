@@ -342,12 +342,12 @@
 
         /* ========== HERO ========== */
         .hero {
-            min-height: 100vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding: 8rem 0 4rem;
+            padding: 7rem 0 4rem;
         }
         .hero-bg { position: absolute; inset: 0; z-index: 0; }
         .hero-orb {
@@ -388,8 +388,51 @@
             mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
             -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
         }
-        .hero .container { position: relative; z-index: 1; }
-        .hero-content { max-width: 750px; }
+        .hero .container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-content { max-width: none; }
+        .hero-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .hero-card {
+            padding: 1.4rem 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+        .hero-card:hover { transform: translateX(6px); }
+        .hero-card-icon {
+            width: 46px; height: 46px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.3rem;
+        }
+        .hero-card-icon-1 { background: linear-gradient(135deg, rgba(74, 58, 255, 0.15), rgba(149, 109, 247, 0.08)); }
+        .hero-card-icon-2 { background: linear-gradient(135deg, rgba(24, 129, 241, 0.15), rgba(73, 211, 248, 0.08)); }
+        .hero-card-icon-3 { background: linear-gradient(135deg, rgba(214, 249, 81, 0.2), rgba(173, 214, 0, 0.1)); }
+        .hero-card h4 {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+        .hero-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -478,13 +521,7 @@
         }
 
         /* Hero glass shapes */
-        .hero-glass-shapes {
-            position: absolute;
-            top: 0; right: 0;
-            width: 50%; height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
+        .hero-glass-shapes { display: none; }
         .glass-shape {
             position: absolute;
             border-radius: 24px;
@@ -979,7 +1016,8 @@
                 border-bottom: 1px solid var(--border);
             }
             .nav-toggle { display: flex; }
-            .hero-glass-shapes { display: none; }
+            .hero .container { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero-visual { display: none; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .services-grid { grid-template-columns: 1fr; }
             .values-grid { grid-template-columns: 1fr; }
@@ -1044,7 +1082,7 @@
                 <span class="hero-badge-dot"></span>
                 Empresa Agent First
             </div>
-            <h1 class="reveal reveal-delay-1">Tu socio de<br><span class="gradient-text">confianza tecnológico</span></h1>
+            <h1 class="reveal reveal-delay-1">Transformación impulsada por<br><span class="gradient-text">Inteligencia Artificial y la nube</span></h1>
             <p class="hero-description reveal reveal-delay-2">Aceleramos la transformación digital a través de soluciones cloud avanzadas, inteligencia artificial y desarrollo de software a medida. Convirtiendo datos y procesos en ventaja competitiva real.</p>
             <div class="hero-actions reveal reveal-delay-3">
                 <a href="#cta" class="btn-primary btn-chartreuse">
@@ -1055,6 +1093,29 @@
                     Ver Servicios
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10m0 0l4-4m-4 4L4 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card glass reveal reveal-delay-1">
+                <div class="hero-card-icon hero-card-icon-1">🤖</div>
+                <div>
+                    <h4>Agentes IA</h4>
+                    <p>Automatización cognitiva que opera 24/7 sin intervención humana</p>
+                </div>
+            </div>
+            <div class="hero-card glass reveal reveal-delay-2">
+                <div class="hero-card-icon hero-card-icon-2">☁️</div>
+                <div>
+                    <h4>Cloud & DevOps</h4>
+                    <p>Infraestructura escalable en AWS, Azure y GCP con excelencia operacional</p>
+                </div>
+            </div>
+            <div class="hero-card glass reveal reveal-delay-3">
+                <div class="hero-card-icon hero-card-icon-3">📊</div>
+                <div>
+                    <h4>Data & Analítica</h4>
+                    <p>Convertimos datos en decisiones con pipelines y plataformas inteligentes</p>
+                </div>
             </div>
         </div>
     </div>
