@@ -195,7 +195,12 @@
             <h2>Contanos tu proyecto</h2>
             <p class="form-subtitle">Completá el formulario y nos ponemos en contacto en menos de 24 horas.</p>
 
-            <form id="contactForm">
+            <form id="contactForm" action="https://formsubmit.co/ajax/hello@kyriom.com" method="POST">
+                <!-- FormSubmit honeypot (anti-spam) -->
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_subject" value="Nuevo contacto desde Kyriom">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="form-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="nombre">Nombre *</label>
@@ -331,12 +336,46 @@
         document.addEventListener("click", function(e) { if (!navDropdown.contains(e.target)) navDropdown.classList.remove("open"); });
     }
 
-    // Form submission (demo — shows success state)
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        this.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
-    });
+    // Form submission via FormSubmit AJAX → hello@kyriom.com
+    (function() {
+        const form = document.getElementById('contactForm');
+        const successBox = document.getElementById('formSuccess');
+        const submitBtn = form.querySelector('.btn-submit');
+        const originalLabel = submitBtn ? submitBtn.innerHTML : '';
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Enviando...';
+            }
+
+            try {
+                const data = new FormData(form);
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                const json = await res.json().catch(() => ({}));
+
+                if (res.ok && (json.success === 'true' || json.success === true)) {
+                    form.style.display = 'none';
+                    successBox.style.display = 'block';
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error(json.message || 'Error al enviar');
+                }
+            } catch (err) {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalLabel;
+                }
+                alert('No pudimos enviar el mensaje. Intentá de nuevo o escribinos a hello@kyriom.com');
+                console.error('FormSubmit error:', err);
+            }
+        });
+    })();
 </script>
 
 </body>
