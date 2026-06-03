@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto — Kyriom</title>
+    <title data-i18n="page.title.contacto">Contacto — Kyriom</title>
     <link rel="icon" type="image/png" href="Logo/Kyriom_Isologo-dark.png">
     <meta name="description" content="Contactá al equipo de Kyriom. Estamos listos para ayudarte a acelerar tu transformación digital con cloud, IA y DevOps.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,6 +128,7 @@
             .contact-info { position: static; }
         }
     </style>
+    <script src="i18n.js" defer></script>
 </head>
 <body>
 
@@ -142,25 +143,26 @@
             <ul class="nav-links" id="navLinks">
                 <li class="nav-dropdown" id="navDropdown">
                     <a href="index.html#servicios" class="nav-dropdown-trigger">
-                        Servicios
+                        <span data-i18n="nav.services">Servicios</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
                     </a>
                     <div class="nav-dropdown-menu">
-                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>DevOps &amp; Cloud</a>
-                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>IA &amp; Agentes</a>
-                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>Data &amp; Analytics</a>
-                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>FinOps</a>
+                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
                     </div>
                 </li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="kyra.html">Kyra</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Toggle theme">
                 <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                 <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
             </button>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -181,10 +183,10 @@
         <div class="contact-info reveal">
             <div class="hero-badge" style="margin-bottom: 1.5rem;">
                 <span class="hero-badge-dot"></span>
-                Hablemos
+                <span data-i18n="contact.hero.badge">Hablemos</span>
             </div>
-            <h1>Transformemos<br>tu empresa <span class="gradient-text">juntos</span></h1>
-            <p>Completá el formulario y un miembro de nuestro equipo se pondrá en contacto con vos en menos de 24 horas hábiles.</p>
+            <h1 data-i18n-html="contact.hero.title">Transformemos<br>tu empresa <span class="gradient-text">juntos</span></h1>
+            <p data-i18n="contact.hero.desc">Completá el formulario y un miembro de nuestro equipo se pondrá en contacto con vos en menos de 24 horas hábiles.</p>
             <p style="margin-top:1rem;font-size:0.9rem;color:var(--text-secondary);">
                 <a href="mailto:hello@kyriom.com" style="color:var(--klein-blue);font-weight:500;">hello@kyriom.com</a>
             </p>
@@ -192,8 +194,8 @@
 
         <!-- RIGHT: Form -->
         <div class="contact-form-card glass reveal reveal-delay-1">
-            <h2>Contanos tu proyecto</h2>
-            <p class="form-subtitle">Completá el formulario y nos ponemos en contacto en menos de 24 horas.</p>
+            <h2 data-i18n="contact.form.title">Contanos tu proyecto</h2>
+            <p class="form-subtitle" data-i18n="contact.form.subtitle">Completá el formulario y nos ponemos en contacto en menos de 24 horas.</p>
 
             <form id="contactForm" action="https://formsubmit.co/ajax/hello@kyriom.com" method="POST">
                 <!-- FormSubmit honeypot (anti-spam) -->
@@ -203,42 +205,42 @@
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-grid-2">
                     <div class="form-group">
-                        <label class="form-label" for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                        <label class="form-label" for="nombre" data-i18n="contact.form.name">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" data-i18n-placeholder="contact.form.name.ph" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">Email *</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@empresa.com" required>
+                        <label class="form-label" for="email" data-i18n="contact.form.email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@empresa.com" data-i18n-placeholder="contact.form.email.ph" required>
                     </div>
                 </div>
                 <div class="form-grid-2">
                     <div class="form-group">
-                        <label class="form-label" for="empresa">Empresa *</label>
-                        <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Nombre de tu empresa" required>
+                        <label class="form-label" for="empresa" data-i18n="contact.form.company">Empresa *</label>
+                        <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Nombre de tu empresa" data-i18n-placeholder="contact.form.company.ph" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="pais">País</label>
-                        <input type="text" id="pais" name="pais" class="form-input" placeholder="Argentina, México...">
+                        <label class="form-label" for="pais" data-i18n="contact.form.country">País</label>
+                        <input type="text" id="pais" name="pais" class="form-input" placeholder="Argentina, México..." data-i18n-placeholder="contact.form.country.ph">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="servicio">¿En qué podemos ayudarte?</label>
+                    <label class="form-label" for="servicio" data-i18n="contact.form.service">¿En qué podemos ayudarte?</label>
                     <select id="servicio" name="servicio" class="form-select">
-                        <option value="" disabled selected>Seleccioná una opción</option>
-                        <option value="cloud-devops">Cloud &amp; DevOps</option>
-                        <option value="ia-agentes">IA &amp; Agentes</option>
-                        <option value="data-analytics">Data &amp; Analytics</option>
-                        <option value="finops">FinOps</option>
-                        <option value="kyra">Kyra</option>
-                        <option value="otro">Otro</option>
+                        <option value="" disabled selected data-i18n="contact.form.service.placeholder">Seleccioná una opción</option>
+                        <option value="cloud-devops" data-i18n="contact.form.service.cloud">Cloud &amp; DevOps</option>
+                        <option value="ia-agentes" data-i18n="contact.form.service.ia">IA &amp; Agentes</option>
+                        <option value="data-analytics" data-i18n="contact.form.service.data">Data &amp; Analytics</option>
+                        <option value="finops" data-i18n="contact.form.service.finops">FinOps</option>
+                        <option value="kyra" data-i18n="contact.form.service.kyra">Kyra</option>
+                        <option value="otro" data-i18n="contact.form.service.other">Otro</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="mensaje">Mensaje *</label>
-                    <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Contanos brevemente qué estás buscando, el tamaño de tu equipo o infraestructura, y cualquier detalle relevante..." required></textarea>
+                    <label class="form-label" for="mensaje" data-i18n="contact.form.message">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Contanos brevemente qué estás buscando, el tamaño de tu equipo o infraestructura, y cualquier detalle relevante..." data-i18n-placeholder="contact.form.message.ph" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary btn-chartreuse btn-submit">
-                    Enviar mensaje
+                    <span data-i18n="contact.form.submit">Enviar mensaje</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
             </form>
@@ -247,8 +249,8 @@
                 <div class="form-success-icon">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                <h3>¡Mensaje enviado!</h3>
-                <p>Gracias por contactarnos. Nuestro equipo se pondrá en contacto con vos en menos de 24 horas hábiles.</p>
+                <h3 data-i18n="contact.form.success.title">¡Mensaje enviado!</h3>
+                <p data-i18n="contact.form.success.desc">Gracias por contactarnos. Nuestro equipo se pondrá en contacto con vos en menos de 24 horas hábiles.</p>
             </div>
         </div>
 
@@ -261,30 +263,30 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo"><img src="Logo/Kyriom_Logotype-white.svg" alt="Kyriom"></div>
-                <p>Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
             </div>
             <div class="footer-col">
-                <h4>Servicios</h4>
+                <h4 data-i18n="footer.services">Servicios</h4>
                 <ul>
-                    <li><a href="servicios/devops-cloud.html">DevOps &amp; Cloud</a></li>
-                    <li><a href="servicios/ia-agentes.html">IA &amp; Agentes</a></li>
-                    <li><a href="servicios/data-analytics.html">Data &amp; Analytics</a></li>
-                    <li><a href="servicios/finops.html">FinOps</a></li>
-                    <li><a href="kyra.html">Kyra</a></li>
+                    <li><a href="servicios/devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="servicios/ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="servicios/data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="servicios/finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Empresa</h4>
+                <h4 data-i18n="footer.company">Empresa</h4>
                 <ul>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="index.html#verticales">Verticales</a></li>
-                    <li><a href="#">Empleos</a></li>
+                    <li><a href="nosotros.html" data-i18n="footer.company.about">Sobre Nosotros</a></li>
+                    <li><a href="index.html#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul>
-                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
                     <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -292,7 +294,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
             <div class="footer-socials">
                 <a href="#" class="footer-social" aria-label="LinkedIn">
                     <img src="icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn">
@@ -341,13 +343,14 @@
         const form = document.getElementById('contactForm');
         const successBox = document.getElementById('formSuccess');
         const submitBtn = form.querySelector('.btn-submit');
-        const originalLabel = submitBtn ? submitBtn.innerHTML : '';
+        let originalLabel = submitBtn ? submitBtn.innerHTML : '';
 
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             if (submitBtn) {
+                originalLabel = submitBtn.innerHTML;
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = 'Enviando...';
+                submitBtn.innerHTML = (window.__KYRIOM_I18N__?.[window.getLang()]?.['contact.form.sending']) || 'Enviando...';
             }
 
             try {
@@ -371,7 +374,7 @@
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalLabel;
                 }
-                alert('No pudimos enviar el mensaje. Intentá de nuevo o escribinos a hello@kyriom.com');
+                alert((window.__KYRIOM_I18N__?.[window.getLang()]?.['contact.form.error']) || 'No pudimos enviar el mensaje. Intentá de nuevo o escribinos a hello@kyriom.com');
                 console.error('FormSubmit error:', err);
             }
         });

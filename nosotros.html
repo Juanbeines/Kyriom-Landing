@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros — Kyriom</title>
+    <title data-i18n="page.title.nosotros">Nosotros — Kyriom</title>
     <link rel="icon" type="image/png" href="Logo/Kyriom_Isologo-dark.png">
     <meta name="description" content="Conocé a Kyriom, una empresa Agent First fundada para acelerar la transformación digital a través de cloud, IA y software a medida.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js" defer></script>
 </head>
 <body>
 
@@ -25,25 +26,26 @@
             <ul class="nav-links" id="navLinks">
                 <li class="nav-dropdown" id="navDropdown">
                     <a href="index.html#servicios" class="nav-dropdown-trigger">
-                        Servicios
+                        <span data-i18n="nav.services">Servicios</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
                     </a>
                     <div class="nav-dropdown-menu">
-                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>DevOps &amp; Cloud</a>
-                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>IA &amp; Agentes</a>
-                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>Data &amp; Analytics</a>
-                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>FinOps</a>
+                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
                     </div>
                 </li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="kyra.html">Kyra</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Toggle theme">
                 <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                 <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
             </button>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -58,12 +60,12 @@
         <div class="hero-grid"></div>
     </div>
     <div class="container">
-        <div class="hero-badge reveal">
+        <div class="hero-badge reveal" data-i18n-html="about.hero.badge">
             <span class="hero-badge-dot"></span>
             Empresa Agent First
         </div>
-        <h1 class="reveal reveal-delay-1">Quiénes <span class="gradient-text">somos</span></h1>
-        <p class="reveal reveal-delay-2">Somos Kyriom, una empresa nacida con el propósito de liderar la nueva era de transformación digital. Creemos que la Inteligencia Artificial y la nube no son solo herramientas: son la base sobre la que se construye el futuro de los negocios.</p>
+        <h1 class="reveal reveal-delay-1" data-i18n-html="about.hero.title">Quiénes <span class="gradient-text">somos</span></h1>
+        <p class="reveal reveal-delay-2" data-i18n="about.hero.desc">Somos Kyriom, una empresa nacida con el propósito de liderar la nueva era de transformación digital. Creemos que la Inteligencia Artificial y la nube no son solo herramientas: son la base sobre la que se construye el futuro de los negocios.</p>
     </div>
 </section>
 
@@ -73,19 +75,19 @@
         <div class="stats-grid">
             <div class="stat-item reveal">
                 <div class="stat-number" data-target="60">0+</div>
-                <div class="stat-label">Ingenieros y Especialistas</div>
+                <div class="stat-label" data-i18n="about.stats.engineers">Ingenieros y Especialistas</div>
             </div>
             <div class="stat-item reveal reveal-delay-1">
                 <div class="stat-number" data-target="86">0+</div>
-                <div class="stat-label">Clientes en el Mundo</div>
+                <div class="stat-label" data-i18n="about.stats.clients">Clientes en el Mundo</div>
             </div>
             <div class="stat-item reveal reveal-delay-2">
                 <div class="stat-number" data-target="6">0</div>
-                <div class="stat-label">Países</div>
+                <div class="stat-label" data-i18n="about.stats.countries">Países</div>
             </div>
             <div class="stat-item reveal reveal-delay-3">
                 <div class="stat-number" data-target="50">0+</div>
-                <div class="stat-label">Certificaciones Cloud</div>
+                <div class="stat-label" data-i18n="about.stats.certs">Certificaciones Cloud</div>
             </div>
         </div>
     </div>
@@ -101,16 +103,16 @@
     <div class="container" style="position:relative;z-index:1;">
         <div class="ai-grid">
             <div class="reveal">
-                <div class="section-label">Nuestra Misión</div>
-                <h2 class="section-title">Convertimos tecnología<br>en ventaja competitiva <span style="background: linear-gradient(135deg, var(--klein-blue), var(--vivid-sky)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">real</span></h2>
-                <p class="section-subtitle" style="margin-bottom: 1.5rem;">Somos una empresa Agent First: diseñamos cada solución con la IA como protagonista. No adoptamos IA como un add-on, sino como el núcleo de nuestra forma de trabajar y de lo que construimos para nuestros clientes.</p>
-                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">Trabajamos con startups de alto crecimiento, empresas medianas y grandes corporaciones en toda América, combinando el conocimiento profundo de cada industria con la agilidad de un equipo que vive en la vanguardia tecnológica.</p>
+                <div class="section-label" data-i18n="about.mission.label">Nuestra Misión</div>
+                <h2 class="section-title" data-i18n-html="about.mission.title">Convertimos tecnología<br>en ventaja competitiva <span style="background: linear-gradient(135deg, var(--klein-blue), var(--vivid-sky)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">real</span></h2>
+                <p class="section-subtitle" style="margin-bottom: 1.5rem;" data-i18n="about.mission.desc1">Somos una empresa Agent First: diseñamos cada solución con la IA como protagonista. No adoptamos IA como un add-on, sino como el núcleo de nuestra forma de trabajar y de lo que construimos para nuestros clientes.</p>
+                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;" data-i18n="about.mission.desc2">Trabajamos con startups de alto crecimiento, empresas medianas y grandes corporaciones en toda América, combinando el conocimiento profundo de cada industria con la agilidad de un equipo que vive en la vanguardia tecnológica.</p>
             </div>
             <div class="reveal reveal-delay-2">
                 <div class="glass-strong" style="padding: 2.5rem; border-radius: 24px;">
-                    <div class="section-label" style="margin-bottom: 1.5rem;">Nuestra cultura</div>
-                    <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.5rem;">En Kyriom, cada miembro del equipo es un propietario. No ejecutamos órdenes, tomamos decisiones. Nos importa el impacto que generamos, no solo el código que escribimos.</p>
-                    <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.85;">Somos curiosos por naturaleza, rigurosos en la práctica y apasionados por la tecnología que cambia vidas. Invertimos en el crecimiento de cada persona porque sabemos que un equipo que evoluciona entrega soluciones que evolucionan.</p>
+                    <div class="section-label" style="margin-bottom: 1.5rem;" data-i18n="about.culture.label">Nuestra cultura</div>
+                    <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.5rem;" data-i18n="about.culture.desc1">En Kyriom, cada miembro del equipo es un propietario. No ejecutamos órdenes, tomamos decisiones. Nos importa el impacto que generamos, no solo el código que escribimos.</p>
+                    <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.85;" data-i18n="about.culture.desc2">Somos curiosos por naturaleza, rigurosos en la práctica y apasionados por la tecnología que cambia vidas. Invertimos en el crecimiento de cada persona porque sabemos que un equipo que evoluciona entrega soluciones que evolucionan.</p>
                 </div>
             </div>
         </div>
@@ -123,37 +125,37 @@
 <section class="values">
     <div class="container">
         <div class="values-header reveal">
-            <div class="section-label">Nuestro ADN</div>
-            <h2 class="section-title">Construidos sobre principios<br>que generan resultados</h2>
+            <div class="section-label" data-i18n="about.values.label">Nuestro ADN</div>
+            <h2 class="section-title" data-i18n-html="about.values.title">Construidos sobre principios<br>que generan resultados</h2>
         </div>
         <div class="values-grid">
             <div class="value-card glass reveal">
                 <div class="value-icon value-icon-1">
                     <img src="icons/zap.svg" width="28" height="28" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Innovar</h3>
-                <p>Creamos soluciones disruptivas que generan un impacto real.</p>
+                <h3 data-i18n="about.values.v1.title">Innovar</h3>
+                <p data-i18n="about.values.v1.desc">Creamos soluciones disruptivas que generan un impacto real.</p>
             </div>
             <div class="value-card glass reveal reveal-delay-1">
                 <div class="value-icon value-icon-2">
                     <img src="icons/trending-up.svg" width="28" height="28" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Evolucionar</h3>
-                <p>Mejoramos y nos adaptamos continuamente para crecer con más fuerza.</p>
+                <h3 data-i18n="about.values.v2.title">Evolucionar</h3>
+                <p data-i18n="about.values.v2.desc">Mejoramos y nos adaptamos continuamente para crecer con más fuerza.</p>
             </div>
             <div class="value-card glass reveal reveal-delay-2">
                 <div class="value-icon value-icon-3">
                     <img src="icons/refresh-cw.svg" width="28" height="28" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Adaptarse</h3>
-                <p>Abrazamos el cambio y pivotamos rápido para entregar excelencia.</p>
+                <h3 data-i18n="about.values.v3.title">Adaptarse</h3>
+                <p data-i18n="about.values.v3.desc">Abrazamos el cambio y pivotamos rápido para entregar excelencia.</p>
             </div>
             <div class="value-card glass reveal reveal-delay-3">
                 <div class="value-icon value-icon-4">
                     <img src="icons/check-circle.svg" width="28" height="28" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Apropiarse</h3>
-                <p>Tomamos decisiones con impacto y empujamos los resultados.</p>
+                <h3 data-i18n="about.values.v4.title">Apropiarse</h3>
+                <p data-i18n="about.values.v4.desc">Tomamos decisiones con impacto y empujamos los resultados.</p>
             </div>
         </div>
     </div>
@@ -166,16 +168,16 @@
     <div class="container">
         <div class="presence-grid">
             <div class="reveal">
-                <div class="section-label">Presencia Global</div>
-                <h2 class="section-title">Operando en<br>toda América</h2>
-                <p class="section-subtitle">Con oficinas y equipos en seis países, ofrecemos expertise local con estándares globales.</p>
+                <div class="section-label" data-i18n="about.presence.label">Presencia Global</div>
+                <h2 class="section-title" data-i18n-html="about.presence.title">Operando en<br>toda América</h2>
+                <p class="section-subtitle" data-i18n="about.presence.desc">Con oficinas y equipos en seis países, ofrecemos expertise local con estándares globales.</p>
                 <div class="presence-locations">
-                    <div class="location-item"><div class="location-flag">&#127482;&#127480;</div><h4>Estados Unidos</h4></div>
-                    <div class="location-item"><div class="location-flag">&#127464;&#127462;</div><h4>Canadá</h4></div>
-                    <div class="location-item"><div class="location-flag">&#127474;&#127485;</div><h4>México</h4></div>
-                    <div class="location-item"><div class="location-flag">&#127464;&#127476;</div><h4>Colombia</h4></div>
-                    <div class="location-item"><div class="location-flag">&#127464;&#127473;</div><h4>Chile</h4></div>
-                    <div class="location-item"><div class="location-flag">&#127462;&#127479;</div><h4>Argentina</h4></div>
+                    <div class="location-item"><div class="location-flag">&#127482;&#127480;</div><h4 data-i18n="about.presence.usa">Estados Unidos</h4></div>
+                    <div class="location-item"><div class="location-flag">&#127464;&#127462;</div><h4 data-i18n="about.presence.canada">Canadá</h4></div>
+                    <div class="location-item"><div class="location-flag">&#127474;&#127485;</div><h4 data-i18n="about.presence.mexico">México</h4></div>
+                    <div class="location-item"><div class="location-flag">&#127464;&#127476;</div><h4 data-i18n="about.presence.colombia">Colombia</h4></div>
+                    <div class="location-item"><div class="location-flag">&#127464;&#127473;</div><h4 data-i18n="about.presence.chile">Chile</h4></div>
+                    <div class="location-item"><div class="location-flag">&#127462;&#127479;</div><h4 data-i18n="about.presence.argentina">Argentina</h4></div>
                 </div>
             </div>
             <div class="presence-visual reveal reveal-delay-2">
@@ -197,15 +199,15 @@
 <section class="cta">
     <div class="container">
         <div class="cta-container glass-strong reveal">
-            <div class="section-label">Sumáte al equipo</div>
-            <h2 class="section-title">¿Querés trabajar<br>con nosotros?</h2>
-            <p class="section-subtitle">Estamos siempre en búsqueda de talento apasionado por la tecnología, la IA y el impacto real en los negocios.</p>
+            <div class="section-label" data-i18n="about.cta.label">Sumáte al equipo</div>
+            <h2 class="section-title" data-i18n-html="about.cta.title">¿Querés trabajar<br>con nosotros?</h2>
+            <p class="section-subtitle" data-i18n="about.cta.desc">Estamos siempre en búsqueda de talento apasionado por la tecnología, la IA y el impacto real en los negocios.</p>
             <div class="cta-actions">
                 <a href="contacto.html" class="btn-primary btn-chartreuse">
-                    Contáctanos
+                    <span data-i18n="about.cta.primary">Contáctanos</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="index.html#servicios" class="btn-secondary">Ver Servicios</a>
+                <a href="index.html#servicios" class="btn-secondary" data-i18n="about.cta.secondary">Ver Servicios</a>
             </div>
         </div>
     </div>
@@ -217,30 +219,30 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo"><img src="Logo/Kyriom_Logotype-white.svg" alt="Kyriom"></div>
-                <p>Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
             </div>
             <div class="footer-col">
-                <h4>Servicios</h4>
+                <h4 data-i18n="footer.services">Servicios</h4>
                 <ul>
-                    <li><a href="servicios/devops-cloud.html">DevOps &amp; Cloud</a></li>
-                    <li><a href="servicios/ia-agentes.html">IA &amp; Agentes</a></li>
-                    <li><a href="servicios/data-analytics.html">Data &amp; Analytics</a></li>
-                    <li><a href="servicios/finops.html">FinOps</a></li>
-                    <li><a href="kyra.html">Kyra</a></li>
+                    <li><a href="servicios/devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="servicios/ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="servicios/data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="servicios/finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Empresa</h4>
+                <h4 data-i18n="footer.company">Empresa</h4>
                 <ul>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="index.html#verticales">Verticales</a></li>
-                    <li><a href="#">Empleos</a></li>
+                    <li><a href="nosotros.html" data-i18n="footer.company.about">Sobre Nosotros</a></li>
+                    <li><a href="index.html#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul>
-                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
                     <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -248,7 +250,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
             <div class="footer-socials">
                 <a href="#" class="footer-social" aria-label="LinkedIn">
                     <img src="icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn">

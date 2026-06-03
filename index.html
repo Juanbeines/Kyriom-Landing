@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyriom — Transformación Digital Cloud & IA</title>
+    <title data-i18n="page.title.index">Kyriom — Transformación Digital Cloud & IA</title>
     <link rel="icon" type="image/png" href="Logo/Kyriom_Isologo-dark.png">
     <meta name="description" content="Kyriom acelera la transformación digital a través de soluciones cloud avanzadas, inteligencia artificial y desarrollo de software a medida.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js" defer></script>
 </head>
 <body>
 
@@ -25,25 +26,26 @@
             <ul class="nav-links" id="navLinks">
                 <li class="nav-dropdown" id="navDropdown">
                     <a href="#servicios" class="nav-dropdown-trigger">
-                        Servicios
+                        <span data-i18n="nav.services">Servicios</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
                     </a>
                     <div class="nav-dropdown-menu">
-                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>DevOps &amp; Cloud</a>
-                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>IA &amp; Agentes</a>
-                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>Data &amp; Analytics</a>
-                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>FinOps</a>
+                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
                     </div>
                 </li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="kyra.html">Kyra</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Cambiar tema">
                 <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                 <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
             </button>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Abrir menú">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -67,17 +69,17 @@
         <div class="hero-content">
             <div class="hero-badge reveal">
                 <span class="hero-badge-dot"></span>
-                Empresa Agent First
+                <span data-i18n="index.hero.badge">Empresa Agent First</span>
             </div>
-            <h1 class="reveal reveal-delay-1">Transformación impulsada por<br><span class="gradient-text">Inteligencia Artificial y la nube</span></h1>
-            <p class="hero-description reveal reveal-delay-2">Aceleramos la transformación digital a través de soluciones cloud avanzadas, inteligencia artificial y desarrollo de software a medida. Convirtiendo datos y procesos en ventaja competitiva real.</p>
+            <h1 class="reveal reveal-delay-1" data-i18n-html="index.hero.title">Transformación impulsada por<br><span class="gradient-text">Inteligencia Artificial y la nube</span></h1>
+            <p class="hero-description reveal reveal-delay-2" data-i18n="index.hero.description">Aceleramos la transformación digital a través de soluciones cloud avanzadas, inteligencia artificial y desarrollo de software a medida. Convirtiendo datos y procesos en ventaja competitiva real.</p>
             <div class="hero-actions reveal reveal-delay-3">
                 <a href="contacto.html" class="btn-primary btn-chartreuse">
-                    Comienza tu camino
+                    <span data-i18n="index.hero.cta.primary">Comienza tu camino</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 <a href="#servicios" class="btn-secondary">
-                    Ver Servicios
+                    <span data-i18n="index.hero.cta.secondary">Ver Servicios</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10m0 0l4-4m-4 4L4 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
             </div>
@@ -91,19 +93,19 @@
         <div class="stats-grid">
             <div class="stat-item reveal">
                 <div class="stat-number" data-target="60">0+</div>
-                <div class="stat-label">Ingenieros y Especialistas</div>
+                <div class="stat-label" data-i18n="index.stats.engineers">Ingenieros y Especialistas</div>
             </div>
             <div class="stat-item reveal reveal-delay-1">
                 <div class="stat-number" data-target="86">0+</div>
-                <div class="stat-label">Clientes en el Mundo</div>
+                <div class="stat-label" data-i18n="index.stats.clients">Clientes en el Mundo</div>
             </div>
             <div class="stat-item reveal reveal-delay-2">
                 <div class="stat-number" data-target="6">0</div>
-                <div class="stat-label">Países</div>
+                <div class="stat-label" data-i18n="index.stats.countries">Países</div>
             </div>
             <div class="stat-item reveal reveal-delay-3">
                 <div class="stat-number" data-target="50">0+</div>
-                <div class="stat-label">Certificaciones Cloud</div>
+                <div class="stat-label" data-i18n="index.stats.certs">Certificaciones Cloud</div>
             </div>
         </div>
     </div>
@@ -113,17 +115,17 @@
 <section class="services" id="servicios">
     <div class="container">
         <div class="services-header reveal">
-            <div class="section-label">Qué Hacemos</div>
-            <h2 class="section-title">Servicios cloud e<br>inteligencia de punta a punta</h2>
-            <p class="section-subtitle">De la estrategia a la ejecución, entregamos soluciones integradas que generan resultados de negocio medibles en cloud, IA y DevOps.</p>
+            <div class="section-label" data-i18n="index.services.label">Qué Hacemos</div>
+            <h2 class="section-title" data-i18n-html="index.services.title">Servicios cloud e<br>inteligencia de punta a punta</h2>
+            <p class="section-subtitle" data-i18n="index.services.subtitle">De la estrategia a la ejecución, entregamos soluciones integradas que generan resultados de negocio medibles en cloud, IA y DevOps.</p>
         </div>
         <div class="servicios-grid">
             <a href="servicios/devops-cloud.html" class="servicio-card glass reveal">
                 <div class="service-icon service-icon-cloud">
                     <img src="icons/cloud.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>DevOps & Cloud</h3>
-                <p>Diseñamos y construimos plataformas cloud escalables con Platform Engineering, DevOps & SRE, modernización de workloads y optimización de costos con FinOps.</p>
+                <h3 data-i18n="index.services.devops.title">DevOps & Cloud</h3>
+                <p data-i18n="index.services.devops.desc">Diseñamos y construimos plataformas cloud escalables con Platform Engineering, DevOps & SRE, modernización de workloads y optimización de costos con FinOps.</p>
                 <div class="service-tags">
                     <span class="service-tag">AWS</span>
                     <span class="service-tag">Kubernetes</span>
@@ -132,7 +134,7 @@
                 </div>
                 <div class="servicio-card-footer">
                     <span class="servicio-link">
-                        Ver detalle
+                        <span data-i18n="index.services.link">Ver detalle</span>
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
                 </div>
@@ -141,17 +143,17 @@
                 <div class="service-icon service-icon-ai">
                     <img src="icons/cpu.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>IA & Agentes</h3>
-                <p>Estrategia de IA, agentes inteligentes que automatizan flujos de trabajo, búsqueda empresarial con RAG y agentes de experiencia al cliente con disponibilidad 24/7.</p>
+                <h3 data-i18n="index.services.ia.title">IA & Agentes</h3>
+                <p data-i18n="index.services.ia.desc">Estrategia de IA, agentes inteligentes que automatizan flujos de trabajo, búsqueda empresarial con RAG y agentes de experiencia al cliente con disponibilidad 24/7.</p>
                 <div class="service-tags">
                     <span class="service-tag">AWS Bedrock</span>
                     <span class="service-tag">RAG</span>
-                    <span class="service-tag">Agentes</span>
+                    <span class="service-tag" data-i18n="tag.agents">Agentes</span>
                     <span class="service-tag">Kyra</span>
                 </div>
                 <div class="servicio-card-footer">
                     <span class="servicio-link">
-                        Ver detalle
+                        <span data-i18n="index.services.link">Ver detalle</span>
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
                 </div>
@@ -160,8 +162,8 @@
                 <div class="service-icon service-icon-data">
                     <img src="icons/bar-chart-2.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Data & Analytics</h3>
-                <p>Modernizamos tu infraestructura de datos para desbloquear insights a escala. Data lakes, MLOps, Agentic Ops y nuestra plataforma SleakOps para operaciones cloud unificadas.</p>
+                <h3 data-i18n="index.services.data.title">Data & Analytics</h3>
+                <p data-i18n="index.services.data.desc">Modernizamos tu infraestructura de datos para desbloquear insights a escala. Data lakes, MLOps, Agentic Ops y nuestra plataforma SleakOps para operaciones cloud unificadas.</p>
                 <div class="service-tags">
                     <span class="service-tag">Data Lakes</span>
                     <span class="service-tag">MLOps</span>
@@ -170,7 +172,7 @@
                 </div>
                 <div class="servicio-card-footer">
                     <span class="servicio-link">
-                        Ver detalle
+                        <span data-i18n="index.services.link">Ver detalle</span>
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
                 </div>
@@ -179,8 +181,8 @@
                 <div class="service-icon service-icon-devops">
                     <img src="icons/trending-up.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>FinOps</h3>
-                <p>Optimizamos tu gasto cloud con gestión de costos basada en datos y el FinOps Framework. Máxima eficiencia financiera sin sacrificar rendimiento ni agilidad.</p>
+                <h3 data-i18n="index.services.finops.title">FinOps</h3>
+                <p data-i18n="index.services.finops.desc">Optimizamos tu gasto cloud con gestión de costos basada en datos y el FinOps Framework. Máxima eficiencia financiera sin sacrificar rendimiento ni agilidad.</p>
                 <div class="service-tags">
                     <span class="service-tag">Cost Optimization</span>
                     <span class="service-tag">Governance</span>
@@ -188,7 +190,7 @@
                 </div>
                 <div class="servicio-card-footer">
                     <span class="servicio-link">
-                        Ver detalle
+                        <span data-i18n="index.services.link">Ver detalle</span>
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
                 </div>
@@ -204,17 +206,17 @@
     <div class="container">
         <div class="ai-grid">
             <div class="ai-content reveal">
-                <div class="section-label">Enfoque Agent First</div>
-                <h2 class="section-title">Automatización inteligente<br>potenciada por <span>Agentes IA</span></h2>
-                <p class="section-subtitle">Diseñamos arquitecturas de agentes multinivel que transforman dominios de negocio completos, desde la orquestación estratégica hasta la automatización cognitiva de tareas.</p>
+                <div class="section-label" data-i18n="index.ai.label">Enfoque Agent First</div>
+                <h2 class="section-title" data-i18n-html="index.ai.title">Automatización inteligente<br>potenciada por <span>Agentes IA</span></h2>
+                <p class="section-subtitle" data-i18n="index.ai.subtitle">Diseñamos arquitecturas de agentes multinivel que transforman dominios de negocio completos, desde la orquestación estratégica hasta la automatización cognitiva de tareas.</p>
                 <div class="ai-features">
                     <div class="ai-feature">
                         <div class="ai-feature-icon">
                             <img src="icons/share-2.svg" width="18" height="18" class="icon icon-adaptive" alt="">
                         </div>
                         <div>
-                            <h4>Orquestadores Estratégicos</h4>
-                            <p>Agentes a nivel de área que alinean objetivos de negocio y datos en tiempo real.</p>
+                            <h4 data-i18n="index.ai.feat1.title">Orquestadores Estratégicos</h4>
+                            <p data-i18n="index.ai.feat1.desc">Agentes a nivel de área que alinean objetivos de negocio y datos en tiempo real.</p>
                         </div>
                     </div>
                     <div class="ai-feature">
@@ -222,8 +224,8 @@
                             <img src="icons/git-branch.svg" width="18" height="18" class="icon icon-adaptive" alt="">
                         </div>
                         <div>
-                            <h4>Agentes de Workflow</h4>
-                            <p>Automatización de procesos que ejecuta de punta a punta sin intervención humana.</p>
+                            <h4 data-i18n="index.ai.feat2.title">Agentes de Workflow</h4>
+                            <p data-i18n="index.ai.feat2.desc">Automatización de procesos que ejecuta de punta a punta sin intervención humana.</p>
                         </div>
                     </div>
                     <div class="ai-feature">
@@ -231,8 +233,8 @@
                             <img src="icons/book-open.svg" width="18" height="18" class="icon icon-adaptive" alt="">
                         </div>
                         <div>
-                            <h4>Agentes de Conocimiento</h4>
-                            <p>Inteligencia transversal con bases de datos vectoriales, RAG y aprendizaje continuo.</p>
+                            <h4 data-i18n="index.ai.feat3.title">Agentes de Conocimiento</h4>
+                            <p data-i18n="index.ai.feat3.desc">Inteligencia transversal con bases de datos vectoriales, RAG y aprendizaje continuo.</p>
                         </div>
                     </div>
                 </div>
@@ -255,21 +257,21 @@
 <section class="partners" id="partners">
     <div class="container">
         <div class="partners-header reveal">
-            <div class="section-label">Ecosistema de Partners</div>
-            <h2 class="section-title">Respaldados por los líderes<br>de la industria</h2>
+            <div class="section-label" data-i18n="index.partners.label">Ecosistema de Partners</div>
+            <h2 class="section-title" data-i18n-html="index.partners.title">Respaldados por los líderes<br>de la industria</h2>
         </div>
         <div class="partners-inner reveal reveal-delay-1">
             <div class="aws-premier-block">
                 <div class="aws-logo-big"><span>aws</span></div>
                 <div class="aws-premier-badge">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
-                    AWS Premier Consulting Partner
+                    <span data-i18n="index.partners.premier">AWS Premier Consulting Partner</span>
                 </div>
                 <div class="aws-competencies">
-                    <span class="aws-comp-badge">Migration Competency</span>
-                    <span class="aws-comp-badge">DevOps Competency</span>
-                    <span class="aws-comp-badge">Data &amp; Analytics Competency</span>
-                    <span class="aws-comp-badge">Machine Learning Competency</span>
+                    <span class="aws-comp-badge" data-i18n="index.partners.comp.migration">Migration Competency</span>
+                    <span class="aws-comp-badge" data-i18n="index.partners.comp.devops">DevOps Competency</span>
+                    <span class="aws-comp-badge" data-i18n="index.partners.comp.data">Data &amp; Analytics Competency</span>
+                    <span class="aws-comp-badge" data-i18n="index.partners.comp.ml">Machine Learning Competency</span>
                 </div>
             </div>
             <div class="partners-secondary">
@@ -287,52 +289,52 @@
 <section class="industries" id="verticales">
     <div class="container">
         <div class="industries-header reveal">
-            <div class="section-label">Verticales</div>
-            <h2 class="section-title">Experiencia profunda<br>en verticales clave</h2>
-            <p class="section-subtitle">Entendemos los desafíos únicos y los requisitos regulatorios de cada industria a la que servimos.</p>
+            <div class="section-label" data-i18n="index.industries.label">Verticales</div>
+            <h2 class="section-title" data-i18n-html="index.industries.title">Experiencia profunda<br>en verticales clave</h2>
+            <p class="section-subtitle" data-i18n="index.industries.subtitle">Entendemos los desafíos únicos y los requisitos regulatorios de cada industria a la que servimos.</p>
         </div>
         <div class="industries-grid">
             <div class="industry-card glass reveal">
                 <div class="industry-icon">
                     <img src="icons/landmark.svg" width="40" height="40" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Servicios Financieros &amp; Fintech</h3>
-                <p>Infraestructura cloud segura y regulatoriamente compatible para banca, pagos e innovación fintech.</p>
+                <h3 data-i18n="index.industries.fintech.title">Servicios Financieros &amp; Fintech</h3>
+                <p data-i18n="index.industries.fintech.desc">Infraestructura cloud segura y regulatoriamente compatible para banca, pagos e innovación fintech.</p>
             </div>
             <div class="industry-card glass reveal reveal-delay-1">
                 <div class="industry-icon">
                     <img src="icons/code-2.svg" width="40" height="40" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>SaaS &amp; Software</h3>
-                <p>Arquitecturas escalables y excelencia DevOps para empresas de software de alto crecimiento.</p>
+                <h3 data-i18n="index.industries.saas.title">SaaS &amp; Software</h3>
+                <p data-i18n="index.industries.saas.desc">Arquitecturas escalables y excelencia DevOps para empresas de software de alto crecimiento.</p>
             </div>
             <div class="industry-card glass reveal reveal-delay-2">
                 <div class="industry-icon">
                     <img src="icons/heart.svg" width="40" height="40" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Salud</h3>
-                <p>Soluciones conformes a HIPAA que modernizan operaciones de salud y experiencias de pacientes.</p>
+                <h3 data-i18n="index.industries.health.title">Salud</h3>
+                <p data-i18n="index.industries.health.desc">Soluciones conformes a HIPAA que modernizan operaciones de salud y experiencias de pacientes.</p>
             </div>
             <div class="industry-card glass reveal reveal-delay-1">
                 <div class="industry-icon">
                     <img src="icons/shopping-cart.svg" width="40" height="40" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Retail &amp; E-commerce</h3>
-                <p>Plataformas cloud-native que escalan ante picos de demanda y ofrecen experiencias personalizadas.</p>
+                <h3 data-i18n="index.industries.retail.title">Retail &amp; E-commerce</h3>
+                <p data-i18n="index.industries.retail.desc">Plataformas cloud-native que escalan ante picos de demanda y ofrecen experiencias personalizadas.</p>
             </div>
             <div class="industry-card glass reveal reveal-delay-2">
                 <div class="industry-icon">
                     <img src="icons/flame.svg" width="40" height="40" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Oil &amp; Gas</h3>
-                <p>Soluciones cloud e IA de grado industrial para eficiencia operativa y mantenimiento predictivo.</p>
+                <h3 data-i18n="index.industries.oil.title">Oil &amp; Gas</h3>
+                <p data-i18n="index.industries.oil.desc">Soluciones cloud e IA de grado industrial para eficiencia operativa y mantenimiento predictivo.</p>
             </div>
             <div class="industry-card glass reveal reveal-delay-3">
                 <div class="industry-icon">
                     <img src="icons/building.svg" width="40" height="40" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Sector Público</h3>
-                <p>Soluciones cloud seguras y soberanas que cumplen con los requisitos de cumplimiento gubernamental y residencia de datos.</p>
+                <h3 data-i18n="index.industries.gov.title">Sector Público</h3>
+                <p data-i18n="index.industries.gov.desc">Soluciones cloud seguras y soberanas que cumplen con los requisitos de cumplimiento gubernamental y residencia de datos.</p>
             </div>
         </div>
     </div>
@@ -342,15 +344,15 @@
 <section class="cta" id="cta">
     <div class="container">
         <div class="cta-container glass-strong reveal">
-            <div class="section-label">¿Listo para Transformar?</div>
-            <h2 class="section-title">Construyamos el futuro<br>de tu empresa</h2>
-            <p class="section-subtitle">Ya sea que estés comenzando tu camino cloud o escalando IA en toda tu organización, nuestro equipo está listo para ayudarte a lograr resultados reales.</p>
+            <div class="section-label" data-i18n="index.cta.label">¿Listo para Transformar?</div>
+            <h2 class="section-title" data-i18n-html="index.cta.title">Construyamos el futuro<br>de tu empresa</h2>
+            <p class="section-subtitle" data-i18n="index.cta.desc">Ya sea que estés comenzando tu camino cloud o escalando IA en toda tu organización, nuestro equipo está listo para ayudarte a lograr resultados reales.</p>
             <div class="cta-actions">
                 <a href="contacto.html" class="btn-primary btn-chartreuse">
-                    Contáctanos
+                    <span data-i18n="index.cta.primary">Contáctanos</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+                <a href="#servicios" class="btn-secondary" data-i18n="index.cta.secondary">Ver Servicios</a>
             </div>
         </div>
     </div>
@@ -362,30 +364,30 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo"><img src="Logo/Kyriom_Logotype-white.svg" alt="Kyriom"></div>
-                <p>Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
             </div>
             <div class="footer-col">
-                <h4>Servicios</h4>
+                <h4 data-i18n="footer.services">Servicios</h4>
                 <ul>
-                    <li><a href="servicios/devops-cloud.html">DevOps &amp; Cloud</a></li>
-                    <li><a href="servicios/ia-agentes.html">IA &amp; Agentes</a></li>
-                    <li><a href="servicios/data-analytics.html">Data &amp; Analytics</a></li>
-                    <li><a href="servicios/finops.html">FinOps</a></li>
-                    <li><a href="kyra.html">Kyra</a></li>
+                    <li><a href="servicios/devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="servicios/ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="servicios/data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="servicios/finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Empresa</h4>
+                <h4 data-i18n="footer.company">Empresa</h4>
                 <ul>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="#verticales">Verticales</a></li>
-                    <li><a href="#">Empleos</a></li>
+                    <li><a href="nosotros.html" data-i18n="footer.company.about">Sobre Nosotros</a></li>
+                    <li><a href="#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul>
-                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
                     <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -393,7 +395,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
             <div class="footer-socials">
                 <a href="#" class="footer-social" aria-label="LinkedIn">
                     <img src="icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn">

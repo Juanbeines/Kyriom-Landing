@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps & Cloud Engineering — Kyriom</title>
+    <title data-i18n="page.title.devops">DevOps & Cloud Engineering — Kyriom</title>
     <link rel="icon" type="image/png" href="../Logo/Kyriom_Isologo-dark.png">
     <meta name="description" content="Platform Engineering, DevOps & SRE, modernización de workloads y FinOps. Kyriom construye infraestructura cloud escalable con excelencia operacional.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +47,7 @@
 
         @media (max-width: 768px) { .detail-services-grid { grid-template-columns: 1fr; } }
     </style>
+    <script src="../i18n.js" defer></script>
 </head>
 <body>
 
@@ -61,25 +62,26 @@
             <ul class="nav-links" id="navLinks">
                 <li class="nav-dropdown" id="navDropdown">
                     <a href="../index.html#servicios" class="nav-dropdown-trigger">
-                        Servicios
+                        <span data-i18n="nav.services">Servicios</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
                     </a>
                     <div class="nav-dropdown-menu">
-                        <a href="devops-cloud.html"><span class="dropdown-icon"><img src="../icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>DevOps &amp; Cloud</a>
-                        <a href="ia-agentes.html"><span class="dropdown-icon"><img src="../icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>IA &amp; Agentes</a>
-                        <a href="data-analytics.html"><span class="dropdown-icon"><img src="../icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>Data &amp; Analytics</a>
-                        <a href="finops.html"><span class="dropdown-icon"><img src="../icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>FinOps</a>
+                        <a href="devops-cloud.html"><span class="dropdown-icon"><img src="../icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="ia-agentes.html"><span class="dropdown-icon"><img src="../icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="data-analytics.html"><span class="dropdown-icon"><img src="../icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="finops.html"><span class="dropdown-icon"><img src="../icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
                     </div>
                 </li>
-                <li><a href="../nosotros.html">Nosotros</a></li>
-                <li><a href="../kyra.html">Kyra</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
+                <li><a href="../nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="../kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="../contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Toggle theme">
                 <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                 <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
             </button>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -95,22 +97,22 @@
     </div>
     <div class="container">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-            <a href="../index.html#servicios" style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-tertiary); transition: color 0.3s;">Servicios</a>
+            <a href="../index.html#servicios" data-i18n="devops.breadcrumb.services" style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-tertiary); transition: color 0.3s;">Servicios</a>
             <span style="color: var(--text-tertiary); font-size: 0.8rem;">/</span>
-            <span style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-secondary);">DevOps &amp; Cloud</span>
+            <span data-i18n="devops.breadcrumb.current" style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-secondary);">DevOps &amp; Cloud</span>
         </div>
         <div class="hero-badge reveal" style="margin-bottom: 1.5rem;">
             <span class="hero-badge-dot"></span>
-            Cloud Engineering
+            <span data-i18n="devops.hero.badge">Cloud Engineering</span>
         </div>
-        <h1 class="reveal reveal-delay-1">DevOps <span class="gradient-text">&amp; Cloud<br>Engineering</span></h1>
-        <p class="reveal reveal-delay-2">Diseñamos y construimos la infraestructura cloud que permite a tu organización moverse más rápido, gastar menos y operar con confianza. Desde la plataforma hasta la producción.</p>
+        <h1 class="reveal reveal-delay-1" data-i18n-html="devops.hero.title">DevOps <span class="gradient-text">&amp; Cloud<br>Engineering</span></h1>
+        <p class="reveal reveal-delay-2" data-i18n="devops.hero.desc">Diseñamos y construimos la infraestructura cloud que permite a tu organización moverse más rápido, gastar menos y operar con confianza. Desde la plataforma hasta la producción.</p>
         <div class="hero-actions reveal reveal-delay-3">
             <a href="../contacto.html" class="btn-primary btn-chartreuse">
-                Hablar con un experto
+                <span data-i18n="devops.hero.cta.primary">Hablar con un experto</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="../index.html#servicios" class="btn-secondary">Ver todos los servicios</a>
+            <a href="../index.html#servicios" class="btn-secondary" data-i18n="devops.hero.cta.secondary">Ver todos los servicios</a>
         </div>
     </div>
 </section>
@@ -121,17 +123,17 @@
 <section class="detail-services">
     <div class="container">
         <div class="services-header reveal">
-            <div class="section-label">Lo que hacemos</div>
-            <h2 class="section-title">Cuatro prácticas,<br>un equipo integrado</h2>
-            <p class="section-subtitle">Nuestros ingenieros cloud trabajan como extensión de tu equipo, dominando cada capa del stack: plataforma, pipeline, operaciones y costos.</p>
+            <div class="section-label" data-i18n="devops.practices.label">Lo que hacemos</div>
+            <h2 class="section-title" data-i18n-html="devops.practices.title">Cuatro prácticas,<br>un equipo integrado</h2>
+            <p class="section-subtitle" data-i18n="devops.practices.subtitle">Nuestros ingenieros cloud trabajan como extensión de tu equipo, dominando cada capa del stack: plataforma, pipeline, operaciones y costos.</p>
         </div>
         <div class="detail-services-grid">
             <div class="detail-card glass reveal">
                 <div class="detail-card-icon service-icon-cloud">
                     <img src="../icons/cloud.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Platform Engineering</h3>
-                <p>Construimos plataformas internas que democratizan el acceso a la infraestructura. Infraestructura como código, portales self-service, golden paths y developer portals que reducen el time-to-production de semanas a horas.</p>
+                <h3 data-i18n="devops.cap1.title">Platform Engineering</h3>
+                <p data-i18n="devops.cap1.desc">Construimos plataformas internas que democratizan el acceso a la infraestructura. Infraestructura como código, portales self-service, golden paths y developer portals que reducen el time-to-production de semanas a horas.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
                     <span class="service-tag">IDP</span>
                     <span class="service-tag">Backstage</span>
@@ -143,8 +145,8 @@
                 <div class="detail-card-icon service-icon-devops">
                     <img src="../icons/layers.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>DevOps &amp; SRE</h3>
-                <p>Implementamos pipelines CI/CD, prácticas de confiabilidad de sitio y observabilidad de extremo a extremo. Métricas de oro (DORA), gestión de incidentes, postmortems y SLOs para mantener tus sistemas en rendimiento óptimo las 24/7.</p>
+                <h3 data-i18n="devops.cap2.title">DevOps &amp; SRE</h3>
+                <p data-i18n="devops.cap2.desc">Implementamos pipelines CI/CD, prácticas de confiabilidad de sitio y observabilidad de extremo a extremo. Métricas de oro (DORA), gestión de incidentes, postmortems y SLOs para mantener tus sistemas en rendimiento óptimo las 24/7.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
                     <span class="service-tag">CI/CD</span>
                     <span class="service-tag">GitLab / GitHub Actions</span>
@@ -156,8 +158,8 @@
                 <div class="detail-card-icon service-icon-devops">
                     <img src="../icons/monitor.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Workload Modernization</h3>
-                <p>Migramos y modernizamos workloads SAP, Oracle y VMware a la nube. Evaluamos la estrategia de las 7R (Rehost, Replatform, Refactor...) para cada aplicación y ejecutamos la migración minimizando riesgo y tiempo de inactividad.</p>
+                <h3 data-i18n="devops.cap3.title">Workload Modernization</h3>
+                <p data-i18n="devops.cap3.desc">Migramos y modernizamos workloads SAP, Oracle y VMware a la nube. Evaluamos la estrategia de las 7R (Rehost, Replatform, Refactor...) para cada aplicación y ejecutamos la migración minimizando riesgo y tiempo de inactividad.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
                     <span class="service-tag">SAP on AWS</span>
                     <span class="service-tag">VMware Migration</span>
@@ -169,8 +171,8 @@
                 <div class="detail-card-icon service-icon-cloud">
                     <img src="../icons/trending-up.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>FinOps</h3>
-                <p>Implementamos el FinOps Framework para instaurar una cultura de responsabilidad financiera cloud. Visibility, optimización continua, compromisos de uso, chargeback/showback y reportes ejecutivos con impacto real en el P&amp;L.</p>
+                <h3 data-i18n="devops.cap4.title">FinOps</h3>
+                <p data-i18n="devops.cap4.desc">Implementamos el FinOps Framework para instaurar una cultura de responsabilidad financiera cloud. Visibility, optimización continua, compromisos de uso, chargeback/showback y reportes ejecutivos con impacto real en el P&amp;L.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
                     <span class="service-tag">Cost Allocation</span>
                     <span class="service-tag">Savings Plans</span>
@@ -189,9 +191,9 @@
     <div class="container">
         <div class="ai-grid">
             <div class="reveal">
-                <div class="section-label">Stack tecnológico</div>
-                <h2 class="section-title">Las herramientas<br>que dominamos</h2>
-                <p class="section-subtitle">Trabajamos con las mejores herramientas del ecosistema cloud nativo, certificadas y probadas en producción a escala.</p>
+                <div class="section-label" data-i18n="devops.tech.label">Stack tecnológico</div>
+                <h2 class="section-title" data-i18n-html="devops.tech.title">Las herramientas<br>que dominamos</h2>
+                <p class="section-subtitle" data-i18n="devops.tech.subtitle">Trabajamos con las mejores herramientas del ecosistema cloud nativo, certificadas y probadas en producción a escala.</p>
                 <div class="tech-grid" style="margin-top: 2rem;">
                     <span class="tech-badge">AWS</span>
                     <span class="tech-badge">Kubernetes</span>
@@ -212,15 +214,15 @@
             </div>
             <div class="reveal reveal-delay-2">
                 <div class="glass-strong" style="padding: 2.5rem;">
-                    <div class="section-label" style="margin-bottom: 1.5rem;">Por qué Kyriom</div>
+                    <div class="section-label" data-i18n="devops.why.label" style="margin-bottom: 1.5rem;">Por qué Kyriom</div>
                     <div class="ai-features">
                         <div class="ai-feature">
                             <div class="ai-feature-icon">
                                 <img src="../icons/star.svg" width="18" height="18" class="icon icon-adaptive" alt="">
                             </div>
                             <div>
-                                <h4>AWS Premier Partner</h4>
-                                <p>Certificados en Migration, DevOps, Data &amp; Analytics y Machine Learning.</p>
+                                <h4 data-i18n="devops.why1.title">AWS Premier Partner</h4>
+                                <p data-i18n="devops.why1.desc">Certificados en Migration, DevOps, Data &amp; Analytics y Machine Learning.</p>
                             </div>
                         </div>
                         <div class="ai-feature">
@@ -228,8 +230,8 @@
                                 <img src="../icons/users.svg" width="18" height="18" class="icon icon-adaptive" alt="">
                             </div>
                             <div>
-                                <h4>Equipo certificado</h4>
-                                <p>Más de 50 certificaciones cloud activas en AWS, GCP, Azure y Kubernetes.</p>
+                                <h4 data-i18n="devops.why2.title">Equipo certificado</h4>
+                                <p data-i18n="devops.why2.desc">Más de 50 certificaciones cloud activas en AWS, GCP, Azure y Kubernetes.</p>
                             </div>
                         </div>
                         <div class="ai-feature">
@@ -237,8 +239,8 @@
                                 <img src="../icons/zap.svg" width="18" height="18" class="icon icon-adaptive" alt="">
                             </div>
                             <div>
-                                <h4>Delivery ágil</h4>
-                                <p>Sprints de dos semanas, visibilidad total y resultados medibles desde el día uno.</p>
+                                <h4 data-i18n="devops.why3.title">Delivery ágil</h4>
+                                <p data-i18n="devops.why3.desc">Sprints de dos semanas, visibilidad total y resultados medibles desde el día uno.</p>
                             </div>
                         </div>
                     </div>
@@ -252,15 +254,15 @@
 <section class="cta">
     <div class="container">
         <div class="cta-container glass-strong reveal">
-            <div class="section-label">¿Listo para empezar?</div>
-            <h2 class="section-title">Tu infraestructura cloud,<br>rediseñada para escalar</h2>
-            <p class="section-subtitle">Hablemos de tu entorno actual y diseñemos juntos el camino hacia una plataforma cloud de clase mundial.</p>
+            <div class="section-label" data-i18n="devops.cta.label">¿Listo para empezar?</div>
+            <h2 class="section-title" data-i18n-html="devops.cta.title">Tu infraestructura cloud,<br>rediseñada para escalar</h2>
+            <p class="section-subtitle" data-i18n="devops.cta.subtitle">Hablemos de tu entorno actual y diseñemos juntos el camino hacia una plataforma cloud de clase mundial.</p>
             <div class="cta-actions">
                 <a href="../contacto.html" class="btn-primary btn-chartreuse">
-                    Hablar con un experto
+                    <span data-i18n="devops.cta.primary">Hablar con un experto</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../index.html#servicios" class="btn-secondary">Ver todos los servicios</a>
+                <a href="../index.html#servicios" class="btn-secondary" data-i18n="devops.cta.secondary">Ver todos los servicios</a>
             </div>
         </div>
     </div>
@@ -272,30 +274,30 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo"><img src="../Logo/Kyriom_Logotype-white.svg" alt="Kyriom"></div>
-                <p>Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
             </div>
             <div class="footer-col">
-                <h4>Servicios</h4>
+                <h4 data-i18n="footer.services">Servicios</h4>
                 <ul>
-                    <li><a href="devops-cloud.html">DevOps &amp; Cloud</a></li>
-                    <li><a href="ia-agentes.html">IA &amp; Agentes</a></li>
-                    <li><a href="data-analytics.html">Data &amp; Analytics</a></li>
-                    <li><a href="finops.html">FinOps</a></li>
-                    <li><a href="../kyra.html">Kyra</a></li>
+                    <li><a href="devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="../kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Empresa</h4>
+                <h4 data-i18n="footer.company">Empresa</h4>
                 <ul>
-                    <li><a href="../nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="../index.html#verticales">Verticales</a></li>
-                    <li><a href="#">Empleos</a></li>
+                    <li><a href="../nosotros.html" data-i18n="footer.company.about">Sobre Nosotros</a></li>
+                    <li><a href="../index.html#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul>
-                    <li><a href="../contacto.html">Contáctanos</a></li>
+                    <li><a href="../contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
                     <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -303,7 +305,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
             <div class="footer-socials">
                 <a href="#" class="footer-social" aria-label="LinkedIn">
                     <img src="../icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyra — El agente de IA multicloud de Kyriom</title>
+    <title data-i18n="page.title.kyra">Kyra — El agente de IA multicloud de Kyriom</title>
     <link rel="icon" type="image/png" href="Logo/Kyriom_Isologo-dark.png">
     <meta name="description" content="Kyra es el agente de IA multicloud de Kyriom. Monitorea, optimiza y automatiza operaciones en AWS, GCP, Azure y Oracle Cloud de forma inteligente.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,6 +203,7 @@
             .kyra-center-name { font-size: 1.3rem; }
         }
     </style>
+    <script src="i18n.js" defer></script>
 </head>
 <body>
 
@@ -217,25 +218,26 @@
             <ul class="nav-links" id="navLinks">
                 <li class="nav-dropdown" id="navDropdown">
                     <a href="index.html#servicios" class="nav-dropdown-trigger">
-                        Servicios
+                        <span data-i18n="nav.services">Servicios</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
                     </a>
                     <div class="nav-dropdown-menu">
-                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>DevOps &amp; Cloud</a>
-                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>IA &amp; Agentes</a>
-                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>Data &amp; Analytics</a>
-                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span>FinOps</a>
+                        <a href="servicios/devops-cloud.html"><span class="dropdown-icon"><img src="icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
                     </div>
                 </li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="kyra.html">Kyra</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Toggle theme">
                 <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                 <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
             </button>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -253,17 +255,17 @@
         <div class="hero-content">
             <div class="kyra-name-badge reveal">
                 <span class="kyra-name-badge-dot"></span>
-                Kyriom AI Agent
+                <span data-i18n="kyra.hero.badge">Kyriom AI Agent</span>
             </div>
-            <h1 class="reveal reveal-delay-1" style="font-family: var(--font-primary); font-weight: 700; font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 1.25rem;">Conocé a <span class="gradient-text">Kyra</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 1.5rem; line-height: 1.75;" class="reveal reveal-delay-1">El agente de IA multicloud de Kyriom.</p>
-            <p style="font-size: 1rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 2.5rem; line-height: 1.8;" class="reveal reveal-delay-2">Kyra es un agente inteligente que monitorea, optimiza y automatiza operaciones multicloud a través de AWS, GCP, Azure y Oracle Cloud. Trabaja de forma continua para que tu infraestructura opere siempre en su mejor versión, sin intervención manual.</p>
+            <h1 class="reveal reveal-delay-1" style="font-family: var(--font-primary); font-weight: 700; font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 1.25rem;" data-i18n-html="kyra.hero.title">Conocé a <span class="gradient-text">Kyra</span></h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 1.5rem; line-height: 1.75;" class="reveal reveal-delay-1" data-i18n="kyra.hero.subtitle">El agente de IA multicloud de Kyriom.</p>
+            <p style="font-size: 1rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 2.5rem; line-height: 1.8;" class="reveal reveal-delay-2" data-i18n="kyra.hero.desc">Kyra es un agente inteligente que monitorea, optimiza y automatiza operaciones multicloud a través de AWS, GCP, Azure y Oracle Cloud. Trabaja de forma continua para que tu infraestructura opere siempre en su mejor versión, sin intervención manual.</p>
             <div class="hero-actions reveal reveal-delay-3">
                 <a href="contacto.html" class="btn-primary btn-chartreuse">
-                    Conocer más
+                    <span data-i18n="kyra.hero.cta.primary">Conocer más</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="servicios/ia-agentes.html" class="btn-secondary">IA &amp; Agentes</a>
+                <a href="servicios/ia-agentes.html" class="btn-secondary" data-i18n="kyra.hero.cta.secondary">IA &amp; Agentes</a>
             </div>
         </div>
         <div class="kyra-visual reveal reveal-delay-2">
@@ -277,7 +279,7 @@
                 <span class="kyra-cloud-chip kyra-chip-oracle">Oracle</span>
                 <div class="kyra-center">
                     <span class="kyra-center-name">Kyra</span>
-                    <span class="kyra-center-sub">AI Agent</span>
+                    <span class="kyra-center-sub" data-i18n="kyra.hero.visual.sub">AI Agent</span>
                 </div>
             </div>
         </div>
@@ -290,61 +292,61 @@
 <section class="kyra-features">
     <div class="container">
         <div class="services-header reveal">
-            <div class="section-label">Capacidades</div>
-            <h2 class="section-title">Todo lo que Kyra<br>hace por vos</h2>
-            <p class="section-subtitle">Kyra combina monitoreo continuo, análisis de costos y automatización operativa en un solo agente que nunca descansa.</p>
+            <div class="section-label" data-i18n="kyra.features.label">Capacidades</div>
+            <h2 class="section-title" data-i18n-html="kyra.features.title">Todo lo que Kyra<br>hace por vos</h2>
+            <p class="section-subtitle" data-i18n="kyra.features.subtitle">Kyra combina monitoreo continuo, análisis de costos y automatización operativa en un solo agente que nunca descansa.</p>
         </div>
         <div class="kyra-features-grid">
             <div class="kyra-feature-card glass reveal">
                 <div class="kyra-feature-icon kyra-feature-icon-1">
                     <img src="icons/activity.svg" width="26" height="26" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Monitoreo Inteligente</h3>
-                <p>Kyra observa en tiempo real el estado de toda tu infraestructura multicloud. Detecta anomalías, cuellos de botella y degradaciones de rendimiento antes de que se conviertan en incidentes, correlacionando métricas de múltiples proveedores cloud en una sola vista unificada.</p>
+                <h3 data-i18n="kyra.feat1.title">Monitoreo Inteligente</h3>
+                <p data-i18n="kyra.feat1.desc">Kyra observa en tiempo real el estado de toda tu infraestructura multicloud. Detecta anomalías, cuellos de botella y degradaciones de rendimiento antes de que se conviertan en incidentes, correlacionando métricas de múltiples proveedores cloud en una sola vista unificada.</p>
                 <div class="kyra-feature-tags">
-                    <span class="service-tag">Observabilidad</span>
-                    <span class="service-tag">Tiempo Real</span>
-                    <span class="service-tag">Multicloud</span>
-                    <span class="service-tag">Anomaly Detection</span>
+                    <span class="service-tag" data-i18n="kyra.feat1.tag1">Observabilidad</span>
+                    <span class="service-tag" data-i18n="kyra.feat1.tag2">Tiempo Real</span>
+                    <span class="service-tag" data-i18n="kyra.feat1.tag3">Multicloud</span>
+                    <span class="service-tag" data-i18n="kyra.feat1.tag4">Anomaly Detection</span>
                 </div>
             </div>
             <div class="kyra-feature-card glass reveal reveal-delay-1">
                 <div class="kyra-feature-icon kyra-feature-icon-2">
                     <img src="icons/trending-up.svg" width="26" height="26" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Optimización de Costos</h3>
-                <p>Kyra analiza continuamente tu consumo cloud e identifica oportunidades de ahorro: recursos sobredimensionados, instancias ociosas, reservas subutilizadas y compromisos de uso. Genera recomendaciones priorizadas con impacto estimado y puede ejecutar ajustes automáticamente.</p>
+                <h3 data-i18n="kyra.feat2.title">Optimización de Costos</h3>
+                <p data-i18n="kyra.feat2.desc">Kyra analiza continuamente tu consumo cloud e identifica oportunidades de ahorro: recursos sobredimensionados, instancias ociosas, reservas subutilizadas y compromisos de uso. Genera recomendaciones priorizadas con impacto estimado y puede ejecutar ajustes automáticamente.</p>
                 <div class="kyra-feature-tags">
-                    <span class="service-tag">FinOps</span>
-                    <span class="service-tag">Cost Savings</span>
-                    <span class="service-tag">Right-sizing</span>
-                    <span class="service-tag">Governance</span>
+                    <span class="service-tag" data-i18n="kyra.feat2.tag1">FinOps</span>
+                    <span class="service-tag" data-i18n="kyra.feat2.tag2">Cost Savings</span>
+                    <span class="service-tag" data-i18n="kyra.feat2.tag3">Right-sizing</span>
+                    <span class="service-tag" data-i18n="kyra.feat2.tag4">Governance</span>
                 </div>
             </div>
             <div class="kyra-feature-card glass reveal reveal-delay-2">
                 <div class="kyra-feature-icon kyra-feature-icon-3">
                     <img src="icons/git-branch.svg" width="26" height="26" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Automatización de Operaciones</h3>
-                <p>Kyra ejecuta playbooks operativos de forma autónoma: escalado de recursos, remediación de incidentes, rotación de credenciales, gestión de backups y aplicación de políticas de seguridad. Reduce el tiempo medio de resolución (MTTR) y libera a tu equipo para tareas de mayor valor.</p>
+                <h3 data-i18n="kyra.feat3.title">Automatización de Operaciones</h3>
+                <p data-i18n="kyra.feat3.desc">Kyra ejecuta playbooks operativos de forma autónoma: escalado de recursos, remediación de incidentes, rotación de credenciales, gestión de backups y aplicación de políticas de seguridad. Reduce el tiempo medio de resolución (MTTR) y libera a tu equipo para tareas de mayor valor.</p>
                 <div class="kyra-feature-tags">
-                    <span class="service-tag">Auto-remediation</span>
-                    <span class="service-tag">Runbooks</span>
-                    <span class="service-tag">Scaling</span>
-                    <span class="service-tag">MTTR</span>
+                    <span class="service-tag" data-i18n="kyra.feat3.tag1">Auto-remediation</span>
+                    <span class="service-tag" data-i18n="kyra.feat3.tag2">Runbooks</span>
+                    <span class="service-tag" data-i18n="kyra.feat3.tag3">Scaling</span>
+                    <span class="service-tag" data-i18n="kyra.feat3.tag4">MTTR</span>
                 </div>
             </div>
             <div class="kyra-feature-card glass reveal reveal-delay-3">
                 <div class="kyra-feature-icon kyra-feature-icon-4">
                     <img src="icons/bell.svg" width="26" height="26" class="icon icon-adaptive" alt="">
                 </div>
-                <h3>Alertas Proactivas</h3>
-                <p>Kyra no espera a que los problemas ocurran. Utiliza modelos predictivos para anticipar eventos de degradación y alertar a tu equipo con contexto completo: causa raíz probable, impacto estimado y acciones recomendadas. Integra con Slack, PagerDuty, email y cualquier canal de tu stack.</p>
+                <h3 data-i18n="kyra.feat4.title">Alertas Proactivas</h3>
+                <p data-i18n="kyra.feat4.desc">Kyra no espera a que los problemas ocurran. Utiliza modelos predictivos para anticipar eventos de degradación y alertar a tu equipo con contexto completo: causa raíz probable, impacto estimado y acciones recomendadas. Integra con Slack, PagerDuty, email y cualquier canal de tu stack.</p>
                 <div class="kyra-feature-tags">
-                    <span class="service-tag">AIOps</span>
-                    <span class="service-tag">Predictive</span>
-                    <span class="service-tag">Slack / PagerDuty</span>
-                    <span class="service-tag">Root Cause</span>
+                    <span class="service-tag" data-i18n="kyra.feat4.tag1">AIOps</span>
+                    <span class="service-tag" data-i18n="kyra.feat4.tag2">Predictive</span>
+                    <span class="service-tag" data-i18n="kyra.feat4.tag3">Slack / PagerDuty</span>
+                    <span class="service-tag" data-i18n="kyra.feat4.tag4">Root Cause</span>
                 </div>
             </div>
         </div>
@@ -357,25 +359,25 @@
 <section class="kyra-how">
     <div class="container">
         <div class="services-header reveal">
-            <div class="section-label">Cómo funciona</div>
-            <h2 class="section-title">De la conexión al valor<br>en minutos</h2>
-            <p class="section-subtitle">Kyra se integra a tu infraestructura existente sin fricción y comienza a generar valor desde el primer día.</p>
+            <div class="section-label" data-i18n="kyra.how.label">Cómo funciona</div>
+            <h2 class="section-title" data-i18n-html="kyra.how.title">De la conexión al valor<br>en minutos</h2>
+            <p class="section-subtitle" data-i18n="kyra.how.subtitle">Kyra se integra a tu infraestructura existente sin fricción y comienza a generar valor desde el primer día.</p>
         </div>
         <div class="kyra-how-steps">
             <div class="kyra-step glass reveal">
                 <div class="kyra-step-num">1</div>
-                <h4>Conectá tus clouds</h4>
-                <p>Kyra se conecta a tu entorno AWS, GCP, Azure y Oracle Cloud mediante roles y permisos de solo lectura. Sin agentes, sin cambios en tu infraestructura.</p>
+                <h4 data-i18n="kyra.how.step1.title">Conectá tus clouds</h4>
+                <p data-i18n="kyra.how.step1.desc">Kyra se conecta a tu entorno AWS, GCP, Azure y Oracle Cloud mediante roles y permisos de solo lectura. Sin agentes, sin cambios en tu infraestructura.</p>
             </div>
             <div class="kyra-step glass reveal reveal-delay-1">
                 <div class="kyra-step-num">2</div>
-                <h4>Kyra aprende tu entorno</h4>
-                <p>En las primeras horas Kyra descubre y mapea todos tus recursos, establece líneas base de comportamiento y comienza a identificar patrones y anomalías.</p>
+                <h4 data-i18n="kyra.how.step2.title">Kyra aprende tu entorno</h4>
+                <p data-i18n="kyra.how.step2.desc">En las primeras horas Kyra descubre y mapea todos tus recursos, establece líneas base de comportamiento y comienza a identificar patrones y anomalías.</p>
             </div>
             <div class="kyra-step glass reveal reveal-delay-2">
                 <div class="kyra-step-num">3</div>
-                <h4>Optimizá y automatizá</h4>
-                <p>Recibís recomendaciones accionables y podés habilitar la automatización progresiva: desde aprobación manual hasta ejecución autónoma según tu nivel de confianza.</p>
+                <h4 data-i18n="kyra.how.step3.title">Optimizá y automatizá</h4>
+                <p data-i18n="kyra.how.step3.desc">Recibís recomendaciones accionables y podés habilitar la automatización progresiva: desde aprobación manual hasta ejecución autónoma según tu nivel de confianza.</p>
             </div>
         </div>
     </div>
@@ -385,25 +387,25 @@
 <section class="kyra-clouds">
     <div class="container">
         <div style="text-align: center;" class="reveal">
-            <div class="section-label">Compatibilidad</div>
-            <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">Funciona con todos<br>los clouds que ya usás</h2>
+            <div class="section-label" data-i18n="kyra.clouds.label">Compatibilidad</div>
+            <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem);" data-i18n-html="kyra.clouds.title">Funciona con todos<br>los clouds que ya usás</h2>
         </div>
         <div class="kyra-clouds-grid">
             <div class="kyra-cloud-badge reveal" style="border-color: rgba(255,153,0,0.2);">
                 <span style="color: #FF9900; font-size: 1.1rem; font-weight: 800;">aws</span>
-                Amazon Web Services
+                <span data-i18n="kyra.clouds.aws">Amazon Web Services</span>
             </div>
             <div class="kyra-cloud-badge reveal reveal-delay-1" style="border-color: rgba(66,133,244,0.2);">
                 <span style="color: #4285F4; font-weight: 700;">GCP</span>
-                Google Cloud Platform
+                <span data-i18n="kyra.clouds.gcp">Google Cloud Platform</span>
             </div>
             <div class="kyra-cloud-badge reveal reveal-delay-2" style="border-color: rgba(0,120,212,0.2);">
                 <span style="color: #0078D4; font-weight: 700;">Azure</span>
-                Microsoft Azure
+                <span data-i18n="kyra.clouds.azure">Microsoft Azure</span>
             </div>
             <div class="kyra-cloud-badge reveal reveal-delay-3" style="border-color: rgba(244,0,0,0.15);">
                 <span style="color: #C74634; font-weight: 700;">OCI</span>
-                Oracle Cloud
+                <span data-i18n="kyra.clouds.oracle">Oracle Cloud</span>
             </div>
         </div>
     </div>
@@ -413,15 +415,15 @@
 <section class="cta">
     <div class="container">
         <div class="cta-container glass-strong reveal">
-            <div class="section-label">Empezá con Kyra</div>
-            <h2 class="section-title">Tu infraestructura, bajo<br>control inteligente</h2>
-            <p class="section-subtitle">Kyra está disponible para clientes de Kyriom. Hablá con nuestro equipo para saber cómo integrarla en tu entorno multicloud.</p>
+            <div class="section-label" data-i18n="kyra.cta.label">Empezá con Kyra</div>
+            <h2 class="section-title" data-i18n-html="kyra.cta.title">Tu infraestructura, bajo<br>control inteligente</h2>
+            <p class="section-subtitle" data-i18n="kyra.cta.desc">Kyra está disponible para clientes de Kyriom. Hablá con nuestro equipo para saber cómo integrarla en tu entorno multicloud.</p>
             <div class="cta-actions">
                 <a href="contacto.html" class="btn-primary btn-chartreuse">
-                    Contactar al equipo
+                    <span data-i18n="kyra.cta.primary">Contactar al equipo</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="servicios/ia-agentes.html" class="btn-secondary">IA &amp; Agentes</a>
+                <a href="servicios/ia-agentes.html" class="btn-secondary" data-i18n="kyra.cta.secondary">IA &amp; Agentes</a>
             </div>
         </div>
     </div>
@@ -433,30 +435,30 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo"><img src="Logo/Kyriom_Logotype-white.svg" alt="Kyriom"></div>
-                <p>Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, IA y desarrollo de software a medida.</p>
             </div>
             <div class="footer-col">
-                <h4>Servicios</h4>
+                <h4 data-i18n="footer.services">Servicios</h4>
                 <ul>
-                    <li><a href="servicios/devops-cloud.html">DevOps &amp; Cloud</a></li>
-                    <li><a href="servicios/ia-agentes.html">IA &amp; Agentes</a></li>
-                    <li><a href="servicios/data-analytics.html">Data &amp; Analytics</a></li>
-                    <li><a href="servicios/finops.html">FinOps</a></li>
-                    <li><a href="kyra.html">Kyra</a></li>
+                    <li><a href="servicios/devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="servicios/ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="servicios/data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="servicios/finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Empresa</h4>
+                <h4 data-i18n="footer.company">Empresa</h4>
                 <ul>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="index.html#verticales">Verticales</a></li>
-                    <li><a href="#">Empleos</a></li>
+                    <li><a href="nosotros.html" data-i18n="footer.company.about">Sobre Nosotros</a></li>
+                    <li><a href="index.html#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul>
-                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
                     <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -464,7 +466,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
             <div class="footer-socials">
                 <a href="#" class="footer-social" aria-label="LinkedIn">
                     <img src="icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn">
