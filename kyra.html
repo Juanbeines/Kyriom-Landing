@@ -55,11 +55,35 @@
             align-items: center;
         }
         .kyra-visual-wrap {
-            width: 380px; height: 380px;
+            width: 460px; height: 460px;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .kyra-glow {
+            position: absolute; inset: 6%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 42%, rgba(73,211,248,0.30), rgba(2,43,176,0.12) 55%, transparent 72%);
+            filter: blur(8px);
+        }
+        .dark .kyra-glow {
+            background: radial-gradient(circle at 50% 42%, rgba(73,211,248,0.28), rgba(214,249,81,0.08) 50%, transparent 72%);
+        }
+        .kyra-mascot-img {
+            position: relative;
+            z-index: 2;
+            width: 76%;
+            height: auto;
+            filter: drop-shadow(0 26px 44px rgba(2,43,176,0.30));
+            animation: kyraFloat 6s ease-in-out infinite;
+        }
+        @keyframes kyraFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-16px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .kyra-mascot-img { animation: none; }
         }
         .kyra-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(2, 43, 176, 0.12); }
         .kyra-ring-1 { inset: 0; animation: ringRotate 28s linear infinite; }
@@ -198,9 +222,7 @@
             .kyra-how-steps { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
-            .kyra-visual-wrap { width: 280px; height: 280px; }
-            .kyra-center { width: 100px; height: 100px; }
-            .kyra-center-name { font-size: 1.3rem; }
+            .kyra-visual-wrap { width: 300px; height: 300px; }
         }
     </style>
     <script src="i18n.js" defer></script>
@@ -226,6 +248,8 @@
                         <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
                         <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
                         <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
+                        <a href="servicios/Platformengineer.html"><span class="dropdown-icon"><img src="icons/server.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.platform">Platform Engineering</span></a>
+                        <a href="servicios/Cloudsecurity.html"><span class="dropdown-icon"><img src="icons/shield.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.security">Cloud Security</span></a>
                     </div>
                 </li>
                 <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
@@ -270,17 +294,10 @@
         </div>
         <div class="kyra-visual reveal reveal-delay-2">
             <div class="kyra-visual-wrap">
+                <div class="kyra-glow"></div>
                 <div class="kyra-ring kyra-ring-1"><div class="kyra-ring-dot"></div></div>
                 <div class="kyra-ring kyra-ring-2"><div class="kyra-ring-dot"></div></div>
-                <div class="kyra-ring kyra-ring-3"><div class="kyra-ring-dot"></div></div>
-                <span class="kyra-cloud-chip kyra-chip-aws">AWS</span>
-                <span class="kyra-cloud-chip kyra-chip-gcp">GCP</span>
-                <span class="kyra-cloud-chip kyra-chip-azure">Azure</span>
-                <span class="kyra-cloud-chip kyra-chip-oracle">Oracle</span>
-                <div class="kyra-center">
-                    <span class="kyra-center-name">Kyra</span>
-                    <span class="kyra-center-sub" data-i18n="kyra.hero.visual.sub">AI Agent</span>
-                </div>
+                <img src="assets/kyra_mascot.png" alt="Kyra — asistente de IA de Kyriom" class="kyra-mascot-img">
             </div>
         </div>
     </div>
@@ -444,6 +461,8 @@
                     <li><a href="servicios/ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
                     <li><a href="servicios/data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
                     <li><a href="servicios/finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="servicios/Platformengineer.html" data-i18n="nav.services.platform">Platform Engineering</a></li>
+                    <li><a href="servicios/Cloudsecurity.html" data-i18n="nav.services.security">Cloud Security</a></li>
                     <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
