@@ -34,6 +34,8 @@
                         <a href="servicios/ia-agentes.html"><span class="dropdown-icon"><img src="icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
                         <a href="servicios/data-analytics.html"><span class="dropdown-icon"><img src="icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
                         <a href="servicios/finops.html"><span class="dropdown-icon"><img src="icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
+                        <a href="servicios/Platformengineer.html"><span class="dropdown-icon"><img src="icons/server.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.platform">Platform Engineering</span></a>
+                        <a href="servicios/Cloudsecurity.html"><span class="dropdown-icon"><img src="icons/shield.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.security">Cloud Security</span></a>
                     </div>
                 </li>
                 <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
@@ -71,8 +73,12 @@
                 <span class="hero-badge-dot"></span>
                 <span data-i18n="index.hero.badge">Empresa Agent First</span>
             </div>
-            <h1 class="reveal reveal-delay-1" data-i18n-html="index.hero.title">Transformación impulsada por<br><span class="gradient-text">Inteligencia Artificial y la nube</span></h1>
-            <p class="hero-description reveal reveal-delay-2" data-i18n="index.hero.description">Aceleramos la transformación digital a través de soluciones cloud avanzadas, inteligencia artificial y desarrollo de software a medida. Convirtiendo datos y procesos en ventaja competitiva real.</p>
+            <h1 class="reveal reveal-delay-1 hero-title-rotating">
+                <span class="hero-rotator gradient-text" id="heroRotator">Impulsa</span>
+                <span data-i18n="index.hero.connector">tu negocio con</span><br>
+                <span data-i18n="index.hero.highlight">Inteligencia Artificial y nube</span>
+            </h1>
+            <p class="hero-description reveal reveal-delay-2" data-i18n="index.hero.description">Aceleramos la transformación digital a través de soluciones cloud avanzadas, inteligencia artificial y modernización de tu on-premise. Convirtiendo datos y procesos en ventaja competitiva real.</p>
             <div class="hero-actions reveal reveal-delay-3">
                 <a href="contacto.html" class="btn-primary btn-chartreuse">
                     <span data-i18n="index.hero.cta.primary">Comienza tu camino</span>
@@ -92,19 +98,19 @@
     <div class="container">
         <div class="stats-grid">
             <div class="stat-item reveal">
-                <div class="stat-number" data-target="60">0+</div>
+                <div class="stat-number" data-target="20">0+</div>
                 <div class="stat-label" data-i18n="index.stats.engineers">Ingenieros y Especialistas</div>
             </div>
             <div class="stat-item reveal reveal-delay-1">
-                <div class="stat-number" data-target="86">0+</div>
+                <div class="stat-number" data-target="50">0+</div>
                 <div class="stat-label" data-i18n="index.stats.clients">Clientes en el Mundo</div>
             </div>
             <div class="stat-item reveal reveal-delay-2">
-                <div class="stat-number" data-target="6">0</div>
+                <div class="stat-number" data-target="5">0</div>
                 <div class="stat-label" data-i18n="index.stats.countries">Países</div>
             </div>
             <div class="stat-item reveal reveal-delay-3">
-                <div class="stat-number" data-target="50">0+</div>
+                <div class="stat-number" data-target="20">0+</div>
                 <div class="stat-label" data-i18n="index.stats.certs">Certificaciones Cloud</div>
             </div>
         </div>
@@ -195,6 +201,44 @@
                     </span>
                 </div>
             </a>
+            <a href="servicios/Platformengineer.html" class="servicio-card glass reveal">
+                <div class="service-icon service-icon-devops">
+                    <img src="icons/server.svg" width="24" height="24" class="icon icon-adaptive" alt="">
+                </div>
+                <h3 data-i18n="index.services.platform.title">Platform Engineering</h3>
+                <p data-i18n="index.services.platform.desc">Construimos plataformas internas de desarrollo (IDP) con golden paths, autoservicio e infraestructura como código para que tus equipos entreguen más rápido.</p>
+                <div class="service-tags">
+                    <span class="service-tag">IDP</span>
+                    <span class="service-tag">Backstage</span>
+                    <span class="service-tag">Golden Paths</span>
+                    <span class="service-tag">GitOps</span>
+                </div>
+                <div class="servicio-card-footer">
+                    <span class="servicio-link">
+                        <span data-i18n="index.services.link">Ver detalle</span>
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </div>
+            </a>
+            <a href="servicios/Cloudsecurity.html" class="servicio-card glass reveal reveal-delay-1">
+                <div class="service-icon service-icon-ai">
+                    <img src="icons/shield.svg" width="24" height="24" class="icon icon-adaptive" alt="">
+                </div>
+                <h3 data-i18n="index.services.security.title">Cloud Security</h3>
+                <p data-i18n="index.services.security.desc">Protegemos tu nube de extremo a extremo con enfoque Zero Trust: postura (CSPM), identidad, DevSecOps y cumplimiento normativo.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Zero Trust</span>
+                    <span class="service-tag">CSPM</span>
+                    <span class="service-tag">IAM</span>
+                    <span class="service-tag">DevSecOps</span>
+                </div>
+                <div class="servicio-card-footer">
+                    <span class="servicio-link">
+                        <span data-i18n="index.services.link">Ver detalle</span>
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -261,23 +305,19 @@
             <h2 class="section-title" data-i18n-html="index.partners.title">Respaldados por los líderes<br>de la industria</h2>
         </div>
         <div class="partners-inner reveal reveal-delay-1">
-            <div class="aws-premier-block">
-                <div class="aws-logo-big"><span>aws</span></div>
-                <div class="aws-premier-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
-                    <span data-i18n="index.partners.premier">AWS Premier Consulting Partner</span>
+            <div class="partners-trio">
+                <div class="partner-card glass">
+                    <span class="partner-name">aws</span>
+                    <span class="partner-kind" data-i18n="index.partners.kind">Cloud Partner</span>
                 </div>
-                <div class="aws-competencies">
-                    <span class="aws-comp-badge" data-i18n="index.partners.comp.migration">Migration Competency</span>
-                    <span class="aws-comp-badge" data-i18n="index.partners.comp.devops">DevOps Competency</span>
-                    <span class="aws-comp-badge" data-i18n="index.partners.comp.data">Data &amp; Analytics Competency</span>
-                    <span class="aws-comp-badge" data-i18n="index.partners.comp.ml">Machine Learning Competency</span>
+                <div class="partner-card glass">
+                    <span class="partner-name">Azure</span>
+                    <span class="partner-kind" data-i18n="index.partners.kind">Cloud Partner</span>
                 </div>
-            </div>
-            <div class="partners-secondary">
-                <div class="partner-logo-sm">Google Cloud</div>
-                <div class="partner-logo-sm">Microsoft Azure</div>
-                <div class="partner-logo-sm">Oracle Cloud</div>
+                <div class="partner-card glass">
+                    <span class="partner-name">Oracle Cloud</span>
+                    <span class="partner-kind" data-i18n="index.partners.kind">Cloud Partner</span>
+                </div>
             </div>
         </div>
     </div>
@@ -340,6 +380,57 @@
     </div>
 </section>
 
+<!-- ===== ON-PREMISE ===== -->
+<div class="section-divider"></div>
+
+<section class="onprem" id="onpremise">
+    <div class="container">
+        <div class="industries-header reveal">
+            <div class="section-label" data-i18n="index.onprem.label">On-Premise</div>
+            <h2 class="section-title" data-i18n="index.onprem.title">El on-premise importa</h2>
+            <p class="section-subtitle" data-i18n="index.onprem.subtitle">No todo vive en la nube. Acompañamos tu infraestructura física con hardware, equipos de trabajo y licenciamiento de las marcas líderes de la industria.</p>
+        </div>
+        <div class="onprem-services">
+            <div class="industry-card glass reveal">
+                <div class="industry-icon">
+                    <img src="icons/server.svg" width="40" height="40" class="icon icon-adaptive" alt="">
+                </div>
+                <h3 data-i18n="index.onprem.hardware.title">Hardware &amp; Datacenter</h3>
+                <p data-i18n="index.onprem.hardware.desc">Servidores, almacenamiento y networking para tu datacenter, con dimensionamiento, provisión y soporte de extremo a extremo.</p>
+            </div>
+            <div class="industry-card glass reveal reveal-delay-1">
+                <div class="industry-icon">
+                    <img src="icons/monitor.svg" width="40" height="40" class="icon icon-adaptive" alt="">
+                </div>
+                <h3 data-i18n="index.onprem.laptops.title">Laptops &amp; Workstations</h3>
+                <p data-i18n="index.onprem.laptops.desc">Equipos de trabajo y estaciones de alto rendimiento para tus equipos, con gestión de ciclo de vida y despliegue.</p>
+            </div>
+            <div class="industry-card glass reveal reveal-delay-2">
+                <div class="industry-icon">
+                    <img src="icons/key.svg" width="40" height="40" class="icon icon-adaptive" alt="">
+                </div>
+                <h3 data-i18n="index.onprem.licensing.title">Licenciamiento &amp; Suscripciones</h3>
+                <p data-i18n="index.onprem.licensing.desc">Licencias, suscripciones y renovaciones de software de las principales marcas, optimizando costos y cumplimiento.</p>
+            </div>
+        </div>
+        <p class="onprem-brands-label reveal" data-i18n="index.onprem.brands">Marcas con las que trabajamos</p>
+        <div class="logo-marquee reveal reveal-delay-1">
+            <div class="logo-track">
+                <span class="brand-logo">Lenovo</span>
+                <span class="brand-logo">HP</span>
+                <span class="brand-logo">Oracle</span>
+                <span class="brand-logo">IBM</span>
+                <span class="brand-logo">Microsoft</span>
+                <span class="brand-logo" aria-hidden="true">Lenovo</span>
+                <span class="brand-logo" aria-hidden="true">HP</span>
+                <span class="brand-logo" aria-hidden="true">Oracle</span>
+                <span class="brand-logo" aria-hidden="true">IBM</span>
+                <span class="brand-logo" aria-hidden="true">Microsoft</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== CTA ===== -->
 <section class="cta" id="cta">
     <div class="container">
@@ -373,6 +464,8 @@
                     <li><a href="servicios/ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
                     <li><a href="servicios/data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
                     <li><a href="servicios/finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="servicios/Platformengineer.html" data-i18n="nav.services.platform">Platform Engineering</a></li>
+                    <li><a href="servicios/Cloudsecurity.html" data-i18n="nav.services.security">Cloud Security</a></li>
                     <li><a href="kyra.html" data-i18n="nav.kyra">Kyra</a></li>
                 </ul>
             </div>
@@ -472,6 +565,42 @@
             if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
+
+    // Hero rotating word
+    (function(){
+        function initRotator(){
+            const el = document.getElementById('heroRotator');
+            if (!el) return;
+            const fallback = ['Impulsa','Moderniza','Transforma'];
+            function words(){
+                const I = window.__KYRIOM_I18N__;
+                const lang = (window.getLang ? window.getLang() : 'es');
+                const d = (I && I[lang]) ? I[lang] : null;
+                if (!d) return fallback;
+                return [d['index.hero.rotator.w1'], d['index.hero.rotator.w2'], d['index.hero.rotator.w3']].filter(Boolean);
+            }
+            let i = 0;
+            el.textContent = words()[0] || fallback[0];
+            const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            setInterval(function(){
+                const w = words();
+                if (!w.length) return;
+                if (reduce) { i = (i+1) % w.length; el.textContent = w[i]; return; }
+                el.classList.add('rot-out');
+                setTimeout(function(){
+                    i = (i+1) % w.length;
+                    el.textContent = w[i];
+                    el.classList.remove('rot-out');
+                    el.classList.add('rot-in');
+                    setTimeout(function(){ el.classList.remove('rot-in'); }, 440);
+                }, 420);
+            }, 2600);
+            const lt = document.getElementById('langToggle');
+            if (lt) lt.addEventListener('click', function(){ setTimeout(function(){ el.textContent = words()[i] || el.textContent; }, 0); });
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initRotator);
+        else initRotator();
+    })();
 </script>
 
 </body>

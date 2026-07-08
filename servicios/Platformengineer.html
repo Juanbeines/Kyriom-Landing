@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page.title.ia">IA & Agentes Inteligentes — Kyriom</title>
+    <title data-i18n="page.title.platform">Platform Engineering — Kyriom</title>
     <link rel="icon" type="image/png" href="../Logo/Kyriom_Isologo-dark.png">
-    <meta name="description" content="Estrategia de IA, agentes inteligentes, RAG y búsqueda empresarial. Kyriom diseña arquitecturas de IA que automatizan procesos y generan ventaja competitiva real.">
+    <meta name="description" content="Plataformas internas de desarrollo (IDP), golden paths, GitOps e infraestructura como código. Kyriom acelera a tus equipos con Platform Engineering.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,43 +14,38 @@
     <style>
         .detail-services { padding: 6rem 0; }
         .detail-services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-        .detail-card { padding: 2.5rem; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
-        .detail-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--btn-primary-bg), transparent); opacity: 0; transition: opacity 0.4s; }
+        .detail-card {
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden;
+        }
+        .detail-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--btn-primary-bg), transparent);
+            opacity: 0; transition: opacity 0.4s;
+        }
         .detail-card:hover::before { opacity: 1; }
         .detail-card:hover { background: var(--card-hover); transform: translateY(-4px); border-color: var(--border-hover); }
         .detail-card-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
         .detail-card h3 { font-family: var(--font-primary); font-weight: 700; font-size: 1.2rem; margin-bottom: 0.75rem; }
         .detail-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
-        .tech-badge { font-family: var(--font-primary); font-size: 0.85rem; font-weight: 500; padding: 0.55rem 1.2rem; border-radius: 50px; border: 1px solid var(--border); background: var(--bg-secondary); color: var(--text-secondary); transition: all 0.3s; display: inline-block; }
+
+        .tech-section { padding: 4rem 0 6rem; }
+        .tech-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+        .tech-badge {
+            font-family: var(--font-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.55rem 1.2rem;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
         .tech-badge:hover { border-color: var(--border-hover); color: var(--text-primary); }
-        .kyra-callout {
-            padding: 2rem 2.5rem;
-            border-radius: 20px;
-            background: linear-gradient(135deg, rgba(2,43,176,0.06), rgba(73,211,248,0.04));
-            border: 1px solid rgba(2,43,176,0.15);
-            display: flex; align-items: center; gap: 2rem;
-            margin-top: 3rem;
-        }
-        .kyra-callout-icon {
-            width: 64px; height: 64px; flex-shrink: 0;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(2,43,176,0.12), rgba(25,2,176,0.08));
-            border: 1px solid rgba(2,43,176,0.2);
-            display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-primary); font-weight: 800; font-size: 1.1rem;
-            background: linear-gradient(135deg, var(--klein-blue), var(--vivid-sky));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .kyra-callout-icon-wrap {
-            width: 64px; height: 64px; flex-shrink: 0;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(2,43,176,0.12), rgba(25,2,176,0.08));
-            border: 1px solid rgba(2,43,176,0.2);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .kyra-callout h4 { font-family: var(--font-primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.4rem; }
-        .kyra-callout p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin: 0; }
-        @media (max-width: 768px) { .detail-services-grid { grid-template-columns: 1fr; } .kyra-callout { flex-direction: column; text-align: center; } }
+
+        @media (max-width: 768px) { .detail-services-grid { grid-template-columns: 1fr; } }
     </style>
     <script src="../i18n.js" defer></script>
 </head>
@@ -104,22 +99,22 @@
     </div>
     <div class="container">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-            <a href="../index.html#servicios" style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-tertiary); transition: color 0.3s;" data-i18n="nav.services">Servicios</a>
+            <a href="../index.html#servicios" data-i18n="platform.breadcrumb.services" style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-tertiary); transition: color 0.3s;">Servicios</a>
             <span style="color: var(--text-tertiary); font-size: 0.8rem;">/</span>
-            <span style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-secondary);" data-i18n="nav.services.ia">IA &amp; Agentes</span>
+            <span data-i18n="platform.breadcrumb.current" style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-secondary);">Platform Engineering</span>
         </div>
         <div class="hero-badge reveal" style="margin-bottom: 1.5rem;">
             <span class="hero-badge-dot"></span>
-            <span data-i18n="ia.hero.badge">Agent First</span>
+            <span data-i18n="platform.hero.badge">Developer Platforms</span>
         </div>
-        <h1 class="reveal reveal-delay-1" data-i18n-html="ia.hero.title">IA <span class="gradient-text">&amp; Agentes<br>Inteligentes</span></h1>
-        <p class="reveal reveal-delay-2" data-i18n="ia.hero.desc">Diseñamos arquitecturas de IA que van más allá de los chatbots. Agentes autónomos, búsqueda empresarial y automatización cognitiva que transforman la forma en que tu organización trabaja.</p>
+        <h1 class="reveal reveal-delay-1" data-i18n-html="platform.hero.title">Platform <span class="gradient-text">Engineering</span></h1>
+        <p class="reveal reveal-delay-2" data-i18n="platform.hero.desc">Construimos plataformas internas de desarrollo (IDP) que democratizan el acceso a la infraestructura. Golden paths, autoservicio y automatización para que tus equipos entreguen software más rápido y con menos fricción.</p>
         <div class="hero-actions reveal reveal-delay-3">
             <a href="../contacto.html" class="btn-primary btn-chartreuse">
-                <span data-i18n="ia.hero.cta.primary">Hablar con un experto</span>
+                <span data-i18n="platform.hero.cta.primary">Hablar con un experto</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="../kyra.html" class="btn-secondary" data-i18n="ia.hero.cta.secondary">Conocer Kyra</a>
+            <a href="../index.html#servicios" class="btn-secondary" data-i18n="platform.hero.cta.secondary">Ver todos los servicios</a>
         </div>
     </div>
 </section>
@@ -130,77 +125,62 @@
 <section class="detail-services">
     <div class="container">
         <div class="services-header reveal">
-            <div class="section-label" data-i18n="ia.detail.label">Lo que hacemos</div>
-            <h2 class="section-title" data-i18n-html="ia.detail.title">De la estrategia<br>a la producción</h2>
-            <p class="section-subtitle" data-i18n="ia.detail.subtitle">Acompañamos a tu organización en cada etapa de la adopción de IA: desde el primer assessment hasta la operación de agentes en producción a escala.</p>
+            <div class="section-label" data-i18n="platform.practices.label">Lo que hacemos</div>
+            <h2 class="section-title" data-i18n-html="platform.practices.title">La plataforma como<br>producto interno</h2>
+            <p class="section-subtitle" data-i18n="platform.practices.subtitle">Tratamos a tu plataforma como un producto: con usuarios (tus desarrolladores), métricas de adopción y mejora continua.</p>
         </div>
         <div class="detail-services-grid">
             <div class="detail-card glass reveal">
-                <div class="detail-card-icon service-icon-ai">
-                    <img src="../icons/cpu.svg" width="24" height="24" class="icon icon-adaptive" alt="">
+                <div class="detail-card-icon service-icon-cloud">
+                    <img src="../icons/layers.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3 data-i18n="ia.card1.title">AI Strategy &amp; Assessment</h3>
-                <p data-i18n="ia.card1.desc">Evaluamos tu madurez en IA y creamos un roadmap personalizado. Identificamos los casos de uso de mayor ROI, analizamos tus datos disponibles y diseñamos la arquitectura de IA adecuada para tu contexto y objetivos de negocio.</p>
+                <h3 data-i18n="platform.cap1.title">Internal Developer Platform</h3>
+                <p data-i18n="platform.cap1.desc">Diseñamos y construimos tu IDP con portales self-service (Backstage), catálogos de servicios y plantillas que reducen el time-to-production de semanas a horas.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
-                    <span class="service-tag">AI Maturity</span>
-                    <span class="service-tag">Roadmap</span>
-                    <span class="service-tag">Use Case Discovery</span>
-                    <span class="service-tag">ROI Planning</span>
+                    <span class="service-tag">IDP</span>
+                    <span class="service-tag">Backstage</span>
+                    <span class="service-tag">Service Catalog</span>
+                    <span class="service-tag">Self-Service</span>
                 </div>
             </div>
             <div class="detail-card glass reveal reveal-delay-1">
-                <div class="detail-card-icon service-icon-ai">
-                    <img src="../icons/share-2.svg" width="24" height="24" class="icon icon-adaptive" alt="">
+                <div class="detail-card-icon service-icon-devops">
+                    <img src="../icons/git-branch.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3 data-i18n="ia.card2.title">AI Agents</h3>
-                <p data-i18n="ia.card2.desc">Construimos agentes inteligentes que automatizan flujos de trabajo completos de extremo a extremo. Desde agentes de investigación y análisis hasta agentes de operaciones que ejecutan acciones autónomamente, reduciendo tareas manuales en un 40-60%.</p>
+                <h3 data-i18n="platform.cap2.title">Golden Paths &amp; IaC</h3>
+                <p data-i18n="platform.cap2.desc">Definimos golden paths y módulos de infraestructura como código reutilizables (Terraform, Crossplane) para estandarizar el aprovisionamiento seguro y repetible.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
-                    <span class="service-tag">AWS Bedrock</span>
-                    <span class="service-tag">Lambda</span>
-                    <span class="service-tag">Step Functions</span>
-                    <span class="service-tag">Multi-Agent</span>
+                    <span class="service-tag">Terraform</span>
+                    <span class="service-tag">Crossplane</span>
+                    <span class="service-tag">Golden Paths</span>
+                    <span class="service-tag">Pulumi</span>
                 </div>
             </div>
             <div class="detail-card glass reveal reveal-delay-2">
-                <div class="detail-card-icon service-icon-ai">
-                    <img src="../icons/search.svg" width="24" height="24" class="icon icon-adaptive" alt="">
+                <div class="detail-card-icon service-icon-devops">
+                    <img src="../icons/refresh-cw.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3 data-i18n="ia.card3.title">RAG &amp; Enterprise Search</h3>
-                <p data-i18n="ia.card3.desc">Transformamos silos de documentos, wikis, tickets y datos estructurados en una base de conocimiento unificada y buscable con IA. Reducción del 80% en tiempo de búsqueda de información, con respuestas precisas y citadas.</p>
+                <h3 data-i18n="platform.cap3.title">GitOps &amp; Automatización</h3>
+                <p data-i18n="platform.cap3.desc">Implementamos flujos GitOps (ArgoCD, Flux) y entornos efímeros automatizados para despliegues consistentes y trazables en todos los ambientes.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
-                    <span class="service-tag">RAG</span>
-                    <span class="service-tag">Vector Databases</span>
-                    <span class="service-tag">Embeddings</span>
-                    <span class="service-tag">Knowledge Graph</span>
+                    <span class="service-tag">ArgoCD</span>
+                    <span class="service-tag">Flux</span>
+                    <span class="service-tag">Kubernetes</span>
+                    <span class="service-tag">Helm</span>
                 </div>
             </div>
             <div class="detail-card glass reveal reveal-delay-3">
-                <div class="detail-card-icon service-icon-ai">
-                    <img src="../icons/message-square.svg" width="24" height="24" class="icon icon-adaptive" alt="">
+                <div class="detail-card-icon service-icon-cloud">
+                    <img src="../icons/users.svg" width="24" height="24" class="icon icon-adaptive" alt="">
                 </div>
-                <h3 data-i18n="ia.card4.title">Customer Experience Agents</h3>
-                <p data-i18n="ia.card4.desc">Agentes conversacionales que atienden consultas de nivel 1 en menos de un segundo, integrados con tu CRM y sistemas de tickets. Reducción del 60-70% en costos de soporte con satisfacción igual o superior al canal humano.</p>
+                <h3 data-i18n="platform.cap4.title">Developer Experience</h3>
+                <p data-i18n="platform.cap4.desc">Medimos y mejoramos la experiencia del desarrollador (DevEx): métricas DORA, observabilidad de la plataforma y reducción de la carga cognitiva.</p>
                 <div class="service-tags" style="margin-top: 1.25rem;">
-                    <span class="service-tag">Amazon Lex</span>
-                    <span class="service-tag">Bedrock</span>
-                    <span class="service-tag">CRM Integration</span>
-                    <span class="service-tag">Omnichannel</span>
+                    <span class="service-tag">DORA Metrics</span>
+                    <span class="service-tag">DevEx</span>
+                    <span class="service-tag">Observability</span>
+                    <span class="service-tag">Portales</span>
                 </div>
-            </div>
-        </div>
-
-        <!-- Kyra callout -->
-        <div class="kyra-callout reveal">
-            <div class="kyra-callout-icon-wrap">
-                <span style="font-family: var(--font-primary); font-weight: 800; font-size: 1.1rem; background: linear-gradient(135deg, var(--klein-blue), var(--vivid-sky)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">K</span>
-            </div>
-            <div>
-                <h4 data-i18n="ia.kyra.title">¿Ya conocés a Kyra?</h4>
-                <p data-i18n="ia.kyra.desc">Kyra es el agente de IA multicloud de Kyriom. Monitorea, optimiza y automatiza operaciones en AWS, GCP, Azure y Oracle Cloud de forma autónoma e inteligente. Disponible para todos los clientes de Kyriom.</p>
-                <a href="../kyra.html" style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-primary); font-size: 0.875rem; font-weight: 600; color: var(--klein-blue); margin-top: 0.75rem; transition: gap 0.3s;">
-                    <span data-i18n="ia.kyra.link">Conocer a Kyra</span>
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
             </div>
         </div>
     </div>
@@ -208,29 +188,66 @@
 
 <div class="section-divider"></div>
 
-<!-- ===== TECH ===== -->
-<section style="padding: 5rem 0 6rem;">
+<!-- ===== TECHNOLOGIES ===== -->
+<section class="tech-section">
     <div class="container">
-        <div class="services-header reveal">
-            <div class="section-label" data-i18n="ia.tech.label">Stack de IA</div>
-            <h2 class="section-title" data-i18n-html="ia.tech.title">Tecnologías que<br>dominamos</h2>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;" class="reveal">
-            <span class="tech-badge">AWS Bedrock</span>
-            <span class="tech-badge">Amazon SageMaker</span>
-            <span class="tech-badge">Amazon Lex</span>
-            <span class="tech-badge">Step Functions</span>
-            <span class="tech-badge">Lambda</span>
-            <span class="tech-badge">OpenAI API</span>
-            <span class="tech-badge">Anthropic Claude</span>
-            <span class="tech-badge">LangChain</span>
-            <span class="tech-badge">LlamaIndex</span>
-            <span class="tech-badge">Pinecone</span>
-            <span class="tech-badge">pgvector</span>
-            <span class="tech-badge">OpenSearch</span>
-            <span class="tech-badge">Vertex AI</span>
-            <span class="tech-badge">Azure OpenAI</span>
-            <span class="tech-badge">Hugging Face</span>
+        <div class="ai-grid">
+            <div class="reveal">
+                <div class="section-label" data-i18n="platform.tech.label">Stack tecnológico</div>
+                <h2 class="section-title" data-i18n-html="platform.tech.title">Las herramientas<br>que dominamos</h2>
+                <p class="section-subtitle" data-i18n="platform.tech.subtitle">Trabajamos con las mejores herramientas del ecosistema de plataformas, probadas en producción a escala.</p>
+                <div class="tech-grid" style="margin-top: 2rem;">
+                    <span class="tech-badge">Backstage</span>
+                    <span class="tech-badge">Terraform</span>
+                    <span class="tech-badge">Crossplane</span>
+                    <span class="tech-badge">ArgoCD</span>
+                    <span class="tech-badge">Flux</span>
+                    <span class="tech-badge">Kubernetes</span>
+                    <span class="tech-badge">Helm</span>
+                    <span class="tech-badge">Kustomize</span>
+                    <span class="tech-badge">GitHub Actions</span>
+                    <span class="tech-badge">GitLab CI</span>
+                    <span class="tech-badge">Vault</span>
+                    <span class="tech-badge">Port</span>
+                    <span class="tech-badge">OPA</span>
+                    <span class="tech-badge">Pulumi</span>
+                    <span class="tech-badge">Istio</span>
+                </div>
+            </div>
+            <div class="reveal reveal-delay-2">
+                <div class="glass-strong" style="padding: 2.5rem;">
+                    <div class="section-label" data-i18n="platform.why.label" style="margin-bottom: 1.5rem;">Por qué Kyriom</div>
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon">
+                                <img src="../icons/star.svg" width="18" height="18" class="icon icon-adaptive" alt="">
+                            </div>
+                            <div>
+                                <h4 data-i18n="platform.why1.title">Partner de Servicios Profesionales</h4>
+                                <p data-i18n="platform.why1.desc">Partner de servicios profesionales de AWS, Azure y Oracle Cloud.</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon">
+                                <img src="../icons/users.svg" width="18" height="18" class="icon icon-adaptive" alt="">
+                            </div>
+                            <div>
+                                <h4 data-i18n="platform.why2.title">Equipo certificado</h4>
+                                <p data-i18n="platform.why2.desc">Más de 20 certificaciones cloud activas en AWS, Azure, Oracle Cloud y Kubernetes.</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon">
+                                <img src="../icons/zap.svg" width="18" height="18" class="icon icon-adaptive" alt="">
+                            </div>
+                            <div>
+                                <h4 data-i18n="platform.why3.title">Delivery ágil</h4>
+                                <p data-i18n="platform.why3.desc">Sprints de dos semanas, visibilidad total y resultados medibles desde el día uno.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -239,15 +256,15 @@
 <section class="cta">
     <div class="container">
         <div class="cta-container glass-strong reveal">
-            <div class="section-label" data-i18n="ia.cta.label">Empezá con IA</div>
-            <h2 class="section-title" data-i18n-html="ia.cta.title">Tu primer agente en<br>producción en semanas</h2>
-            <p class="section-subtitle" data-i18n="ia.cta.subtitle">Tenemos un programa de adopción de IA diseñado para entregar valor rápido. El primer caso de uso en producción en 4 a 8 semanas.</p>
+            <div class="section-label" data-i18n="platform.cta.label">¿Listo para empezar?</div>
+            <h2 class="section-title" data-i18n-html="platform.cta.title">Tu plataforma interna,<br>lista para escalar</h2>
+            <p class="section-subtitle" data-i18n="platform.cta.subtitle">Hablemos de tu flujo de desarrollo actual y construyamos juntos una plataforma que acelere a todos tus equipos.</p>
             <div class="cta-actions">
                 <a href="../contacto.html" class="btn-primary btn-chartreuse">
-                    <span data-i18n="ia.cta.primary">Hablar con un experto</span>
+                    <span data-i18n="platform.cta.primary">Hablar con un experto</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../index.html#servicios" class="btn-secondary" data-i18n="ia.cta.secondary">Ver todos los servicios</a>
+                <a href="../index.html#servicios" class="btn-secondary" data-i18n="platform.cta.secondary">Ver todos los servicios</a>
             </div>
         </div>
     </div>
@@ -294,8 +311,12 @@
         <div class="footer-bottom">
             <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
             <div class="footer-socials">
-                <a href="#" class="footer-social" aria-label="LinkedIn"><img src="../icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn"></a>
-                <a href="#" class="footer-social" aria-label="Twitter"><img src="../icons/twitter.svg" width="16" height="16" class="icon icon-adaptive" alt="Twitter"></a>
+                <a href="#" class="footer-social" aria-label="LinkedIn">
+                    <img src="../icons/linkedin.svg" width="16" height="16" class="icon icon-adaptive" alt="LinkedIn">
+                </a>
+                <a href="#" class="footer-social" aria-label="Twitter">
+                    <img src="../icons/twitter.svg" width="16" height="16" class="icon icon-adaptive" alt="Twitter">
+                </a>
             </div>
         </div>
     </div>
@@ -305,8 +326,13 @@
     const themeToggle = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('kyriom-theme');
     if (savedTheme === 'dark') document.body.classList.add('dark');
-    themeToggle.addEventListener('click', () => { document.body.classList.toggle('dark'); localStorage.setItem('kyriom-theme', document.body.classList.contains('dark') ? 'dark' : 'light'); });
-    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('kyriom-theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 50); }, { passive: true });
@@ -322,5 +348,6 @@
         document.addEventListener("click", function(e) { if (!navDropdown.contains(e.target)) navDropdown.classList.remove("open"); });
     }
 </script>
+
 </body>
 </html>
