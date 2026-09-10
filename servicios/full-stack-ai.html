@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title.fullstackai">Full Stack AI On-Premise — Kyriom</title>
+    <link rel="icon" type="image/png" href="../Logo/Kyriom_Isologo-dark.png">
+    <meta name="description" content="IA de punta a punta en tu datacenter: servidores GPU NVIDIA L4, T4, A100, H100 y H200, plataforma OpenShift AI y modelos de Hugging Face, instalados y operados por Kyriom.">
+    <meta property="og:title" content="Full Stack AI On-Premise — Kyriom">
+    <meta property="og:description" content="De la GPU a producción: hardware, OpenShift AI, modelos y servicios de AI Specialist con un solo partner.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyriom.com/servicios/full-stack-ai.html">
+    <link rel="canonical" href="https://kyriom.com/servicios/full-stack-ai.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .detail-services{padding:6rem 0}
+        .detail-services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+        .detail-card{padding:2.5rem;transition:all .4s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
+        .detail-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--btn-primary-bg),transparent);opacity:0;transition:opacity .4s}
+        .detail-card:hover::before{opacity:1}
+        .detail-card:hover{background:var(--card-hover);transform:translateY(-4px);border-color:var(--border-hover)}
+        .detail-card-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+        .detail-card h3{font-family:var(--font-primary);font-weight:700;font-size:1.2rem;margin-bottom:.75rem}
+        .detail-card p{font-size:.95rem;color:var(--text-secondary);line-height:1.75}
+        .tech-badge{font-family:var(--font-primary);font-size:.85rem;font-weight:500;padding:.55rem 1.2rem;border-radius:50px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-secondary);transition:all .3s;display:inline-block}
+        .tech-badge:hover{border-color:var(--border-hover);color:var(--text-primary)}
+        .stack-layers{display:flex;flex-direction:column;gap:1rem;margin-top:3rem}
+        .layer{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:center;padding:1.75rem 2rem;border-radius:18px;border:1px solid var(--border);background:var(--bg-secondary);transition:all .3s}
+        .layer:hover{border-color:var(--border-hover);transform:translateX(4px)}
+        .layer-tag{font-family:var(--font-primary);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--klein-blue),var(--vivid-sky));padding:.45rem .9rem;border-radius:8px;white-space:nowrap}
+        .layer h4{font-family:var(--font-primary);font-weight:700;font-size:1.05rem;margin-bottom:.35rem}
+        .layer p{font-size:.9rem;color:var(--text-secondary);line-height:1.65;margin:0}
+        .gpu-table{margin-top:3rem;border:1px solid var(--border);border-radius:18px;overflow:hidden}
+        .gpu-row{display:grid;grid-template-columns:.8fr 1.1fr 2fr;gap:1.5rem;padding:1.15rem 1.75rem;border-bottom:1px solid var(--border);align-items:center}
+        .gpu-row:last-child{border-bottom:none}
+        .gpu-row.head{background:var(--bg-secondary);font-family:var(--font-primary);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary)}
+        .gpu-name{font-family:var(--font-primary);font-weight:700;font-size:1rem;color:var(--text-primary)}
+        .gpu-kind{font-size:.85rem;color:var(--text-secondary);font-weight:600}
+        .gpu-use{font-size:.88rem;color:var(--text-secondary);line-height:1.6}
+        .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+        .why-card{padding:1.75rem 1.5rem;border-radius:18px;border:1px solid var(--border);background:var(--bg-secondary);transition:all .3s}
+        .why-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
+        .why-card h4{font-family:var(--font-primary);font-weight:700;font-size:1rem;margin:.9rem 0 .4rem}
+        .why-card p{font-size:.85rem;color:var(--text-secondary);line-height:1.6;margin:0}
+        .end-band{margin-top:3rem;padding:2.5rem;border-radius:22px;background:linear-gradient(135deg,rgba(2,43,176,.07),rgba(73,211,248,.04));border:1px solid rgba(2,43,176,.15)}
+        .end-band h3{font-family:var(--font-primary);font-weight:700;font-size:1.25rem;margin-bottom:.6rem}
+        .end-band p{font-size:.95rem;color:var(--text-secondary);line-height:1.75;margin:0;max-width:62ch}
+        @media (max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}.gpu-row{grid-template-columns:1fr;gap:.4rem}.gpu-row.head{display:none}}
+        @media (max-width:768px){.detail-services-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.layer{grid-template-columns:1fr;gap:.9rem}}
+    </style>
+    <script src="../i18n.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="container">
+        <a href="../index.html" class="nav-logo">
+            <img src="../Logo/Kyriom_Isologo-dark.svg" alt="Kyriom" class="logo-light">
+            <img src="../Logo/Kyriom_Isologo-white.svg" alt="Kyriom" class="logo-dark">
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-dropdown" id="navDropdown">
+                    <a href="../index.html#servicios" class="nav-dropdown-trigger">
+                        <span data-i18n="nav.services">Servicios</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="devops-cloud.html"><span class="dropdown-icon"><img src="../icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="ia-agentes.html"><span class="dropdown-icon"><img src="../icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="data-analytics.html"><span class="dropdown-icon"><img src="../icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="finops.html"><span class="dropdown-icon"><img src="../icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
+                        <a href="Platformengineer.html"><span class="dropdown-icon"><img src="../icons/server.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.platform">Platform Engineering</span></a>
+                        <a href="Cloudsecurity.html"><span class="dropdown-icon"><img src="../icons/shield.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.security">Cloud Security</span></a>
+                        <a href="full-stack-ai.html"><span class="dropdown-icon"><img src="../icons/layers.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.fullstackai">Full Stack AI</span></a>
+                    </div>
+                </li>
+                <li><a href="../kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="web3.html" class="nav-web3" data-i18n="nav.web3">Web3</a></li>
+                <li><a href="../contacto.html" data-i18n="nav.contact">Contacto</a></li>
+            </ul>
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </button>
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+        <div style="display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1rem">
+            <a href="../index.html#servicios" style="font-family:var(--font-primary);font-size:.8rem;color:var(--text-tertiary)" data-i18n="nav.services">Servicios</a>
+            <span style="color:var(--text-tertiary);font-size:.8rem">/</span>
+            <span style="font-family:var(--font-primary);font-size:.8rem;color:var(--text-secondary)" data-i18n="nav.services.fullstackai">Full Stack AI</span>
+        </div>
+        <div class="hero-badge reveal" style="margin-bottom:1.5rem">
+            <span class="hero-badge-dot"></span>
+            <span data-i18n="fsai.hero.badge">Servicio transversal</span>
+        </div>
+        <h1 class="reveal reveal-delay-1" data-i18n-html="fsai.hero.title">Full Stack AI <span class="gradient-text">on-premise</span></h1>
+        <p class="reveal reveal-delay-2" data-i18n="fsai.hero.desc">De la GPU a producción: servidores con GPU NVIDIA, plataforma OpenShift AI, modelos de Hugging Face y servicios de AI Specialist. Todo el stack de IA en tu datacenter, con un solo partner.</p>
+        <div class="hero-actions reveal reveal-delay-3">
+            <a href="../contacto.html" class="btn-primary btn-chartreuse">
+                <span data-i18n="fsai.hero.cta.primary">Hablar con un experto</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#stack" class="btn-secondary" data-i18n="fsai.hero.cta.secondary">Ver el stack</a>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="detail-services" id="stack">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="fsai.stack.label">El stack, capa por capa</div>
+            <h2 class="section-title" data-i18n-html="fsai.stack.title">De la GPU<br>a producción</h2>
+            <p class="section-subtitle" data-i18n="fsai.stack.subtitle">Cuatro capas que implementamos de punta a punta: hardware, puesta en marcha, plataforma de modelos y los servicios que llevan tu caso de uso a producción.</p>
+        </div>
+        <div class="stack-layers">
+            <div class="layer glass reveal">
+                <span class="layer-tag" data-i18n="fsai.layer4.tag">Capa 04</span>
+                <div>
+                    <h4 data-i18n="fsai.layer4.title">Servicios AI Specialist</h4>
+                    <p data-i18n="fsai.layer4.desc">Modelado, fine-tuning y RAGs a medida del caso de uso del cliente, con evaluación de resultados y puesta en producción.</p>
+                </div>
+            </div>
+            <div class="layer glass reveal reveal-delay-1">
+                <span class="layer-tag" data-i18n="fsai.layer3.tag">Capa 03</span>
+                <div>
+                    <h4 data-i18n="fsai.layer3.title">Plataforma OpenShift AI &amp; Hugging Face</h4>
+                    <p data-i18n="fsai.layer3.desc">LLMs certificados sobre OpenShift AI, con Hugging Face como plataforma de modelos open source. Serving, versionado y control de acceso incluidos.</p>
+                </div>
+            </div>
+            <div class="layer glass reveal reveal-delay-2">
+                <span class="layer-tag" data-i18n="fsai.layer2.tag">Capa 02</span>
+                <div>
+                    <h4 data-i18n="fsai.layer2.title">Instalación y rackeado</h4>
+                    <p data-i18n="fsai.layer2.desc">Puesta en marcha del servidor en el datacenter, llave en mano: energía, refrigeración, networking y validación del equipo.</p>
+                </div>
+            </div>
+            <div class="layer glass reveal reveal-delay-3">
+                <span class="layer-tag" data-i18n="fsai.layer1.tag">Capa 01</span>
+                <div>
+                    <h4 data-i18n="fsai.layer1.title">Servers GPU Intensive</h4>
+                    <p data-i18n="fsai.layer1.desc">Servidores Lenovo, HPE y Dell con GPU NVIDIA T4, L4, A100, H100 y H200, dimensionados según la carga de inferencia o entrenamiento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="end-band reveal">
+            <h3 data-i18n="fsai.end.title">Un solo partner, todo el stack</h3>
+            <p data-i18n="fsai.end.desc">Diseño, hardware, plataforma y modelos: implementamos el stack de IA de punta a punta, sin integradores adicionales ni responsabilidades repartidas entre proveedores.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section style="padding:5rem 0">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="fsai.gpu.label">Hardware</div>
+            <h2 class="section-title" data-i18n-html="fsai.gpu.title">La GPU correcta<br>para cada carga</h2>
+            <p class="section-subtitle" data-i18n="fsai.gpu.subtitle">Dimensionamos el equipo según el caso de uso real, no según el catálogo. Inferencia liviana, fine-tuning o entrenamiento de modelos grandes tienen respuestas distintas.</p>
+        </div>
+        <div class="gpu-table reveal">
+            <div class="gpu-row head">
+                <span data-i18n="fsai.gpu.col1">GPU</span>
+                <span data-i18n="fsai.gpu.col2">Perfil</span>
+                <span data-i18n="fsai.gpu.col3">Dónde encaja</span>
+            </div>
+            <div class="gpu-row">
+                <span class="gpu-name">NVIDIA T4</span>
+                <span class="gpu-kind" data-i18n="fsai.gpu.t4.kind">Inferencia liviana</span>
+                <span class="gpu-use" data-i18n="fsai.gpu.t4.use">Modelos pequeños, visión por computadora y pilotos de bajo consumo energético.</span>
+            </div>
+            <div class="gpu-row">
+                <span class="gpu-name">NVIDIA L4</span>
+                <span class="gpu-kind" data-i18n="fsai.gpu.l4.kind">Inferencia eficiente</span>
+                <span class="gpu-use" data-i18n="fsai.gpu.l4.use">Serving de LLMs medianos y cargas de video/IA generativa con buena relación costo-consumo.</span>
+            </div>
+            <div class="gpu-row">
+                <span class="gpu-name">NVIDIA A100</span>
+                <span class="gpu-kind" data-i18n="fsai.gpu.a100.kind">Entrenamiento y fine-tuning</span>
+                <span class="gpu-use" data-i18n="fsai.gpu.a100.use">Fine-tuning de modelos abiertos y cargas de entrenamiento con multi-instancia (MIG).</span>
+            </div>
+            <div class="gpu-row">
+                <span class="gpu-name">NVIDIA H100</span>
+                <span class="gpu-kind" data-i18n="fsai.gpu.h100.kind">Alto rendimiento</span>
+                <span class="gpu-use" data-i18n="fsai.gpu.h100.use">LLMs grandes en producción, throughput alto de inferencia y entrenamiento distribuido.</span>
+            </div>
+            <div class="gpu-row">
+                <span class="gpu-name">NVIDIA H200</span>
+                <span class="gpu-kind" data-i18n="fsai.gpu.h200.kind">Máxima memoria</span>
+                <span class="gpu-use" data-i18n="fsai.gpu.h200.use">Modelos de contexto extenso y cargas limitadas por memoria de GPU.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section style="padding:5rem 0">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="fsai.why.label">Por qué on-premise</div>
+            <h2 class="section-title" data-i18n-html="fsai.why.title">Cuando la IA no puede<br>salir de tu datacenter</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card glass reveal">
+                <img src="../icons/shield.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="fsai.why1.title">Soberanía del dato</h4>
+                <p data-i18n="fsai.why1.desc">La información sensible nunca sale de tu infraestructura ni alimenta modelos de terceros.</p>
+            </div>
+            <div class="why-card glass reveal reveal-delay-1">
+                <img src="../icons/trending-up.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="fsai.why2.title">Costo predecible</h4>
+                <p data-i18n="fsai.why2.desc">Inversión de capital conocida en lugar de facturación por token con volumen difícil de proyectar.</p>
+            </div>
+            <div class="why-card glass reveal reveal-delay-2">
+                <img src="../icons/zap.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="fsai.why3.title">Latencia baja</h4>
+                <p data-i18n="fsai.why3.desc">Inferencia junto a los sistemas que la consumen, sin salto a internet en cada request.</p>
+            </div>
+            <div class="why-card glass reveal reveal-delay-3">
+                <img src="../icons/check-circle.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="fsai.why4.title">Cumplimiento</h4>
+                <p data-i18n="fsai.why4.desc">Requisitos de residencia de datos y auditoría cubiertos por diseño, no por excepción.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section style="padding:5rem 0 6rem">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="fsai.tech.label">Stack técnico</div>
+            <h2 class="section-title" data-i18n-html="fsai.tech.title">Tecnologías que<br>dominamos</h2>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center" class="reveal">
+            <span class="tech-badge">OpenShift AI</span>
+            <span class="tech-badge">Hugging Face</span>
+            <span class="tech-badge">NVIDIA H200</span>
+            <span class="tech-badge">NVIDIA H100</span>
+            <span class="tech-badge">NVIDIA A100</span>
+            <span class="tech-badge">NVIDIA L4</span>
+            <span class="tech-badge">NVIDIA T4</span>
+            <span class="tech-badge">Kubernetes</span>
+            <span class="tech-badge">vLLM</span>
+            <span class="tech-badge">Ray</span>
+            <span class="tech-badge">RAG</span>
+            <span class="tech-badge">Fine-tuning</span>
+            <span class="tech-badge">Lenovo</span>
+            <span class="tech-badge">HPE</span>
+            <span class="tech-badge">Dell</span>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-container glass-strong reveal">
+            <div class="section-label" data-i18n="fsai.cta.label">Empezá tu stack de IA</div>
+            <h2 class="section-title" data-i18n-html="fsai.cta.title">Dimensionemos tu<br>infraestructura de IA</h2>
+            <p class="section-subtitle" data-i18n="fsai.cta.subtitle">Partimos del caso de uso, definimos el equipamiento necesario y te entregamos el stack funcionando en tu datacenter.</p>
+            <div class="cta-actions">
+                <a href="../contacto.html" class="btn-primary btn-chartreuse">
+                    <span data-i18n="fsai.cta.primary">Hablar con un experto</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../index.html#servicios" class="btn-secondary" data-i18n="fsai.cta.secondary">Ver todos los servicios</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo"><img src="../Logo/kyriom_logo_white.png" alt="Kyriom"></div>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, inteligencia artificial y Web3.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services">Servicios</h4>
+                <ul>
+                    <li><a href="devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="Platformengineer.html" data-i18n="nav.services.platform">Platform Engineering</a></li>
+                    <li><a href="Cloudsecurity.html" data-i18n="nav.services.security">Cloud Security</a></li>
+                    <li><a href="full-stack-ai.html" data-i18n="nav.services.fullstackai">Full Stack AI</a></li>
+                    <li><a href="web3.html" data-i18n="nav.services.web3">Kyriom Web3</a></li>
+                    <li><a href="../kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <ul>
+                    <li><a href="../index.html#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">Contacto</h4>
+                <ul>
+                    <li><a href="../contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
+                    <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
+                    <li><a href="https://www.linkedin.com/company/kyriom" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/kyriom_cloud/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/kyriom" class="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="../icons/linkedin.svg" width="16" height="16" class="icon icon-social" alt="LinkedIn"></a>
+                <a href="#" class="footer-social" aria-label="X" target="_blank" rel="noopener"><img src="../icons/x.svg" width="16" height="16" class="icon icon-social" alt="X"></a>
+                <a href="https://www.instagram.com/kyriom_cloud/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><img src="../icons/instagram.svg" width="16" height="16" class="icon icon-social" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('kyriom-theme');
+    if (savedTheme === 'dark') document.body.classList.add('dark');
+    themeToggle.addEventListener('click', () => { document.body.classList.toggle('dark'); localStorage.setItem('kyriom-theme', document.body.classList.contains('dark') ? 'dark' : 'light'); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 50); }, { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll("a").forEach(link => { link.addEventListener("click", () => navLinks.classList.remove("open")); });
+    const navDropdown = document.getElementById("navDropdown");
+    if (navDropdown) {
+        navDropdown.querySelector(".nav-dropdown-trigger").addEventListener("click", function(e) {
+            if (window.innerWidth <= 768) { e.preventDefault(); navDropdown.classList.toggle("open"); }
+        });
+        document.addEventListener("click", function(e) { if (!navDropdown.contains(e.target)) navDropdown.classList.remove("open"); });
+    }
+</script>
+</body>
+</html>

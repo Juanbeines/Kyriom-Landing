@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title.web3">Kyriom 3.0 — Tokenización de Activos Reales (RWA)</title>
+    <link rel="icon" type="image/png" href="../Logo/Kyriom_Isologo-dark.png">
+    <meta name="description" content="Kyriom 3.0 tokeniza activos del mundo real: inmuebles, contratos, créditos y commodities. Emisión on-chain, marketplace propio y desarrollo de plataformas Web3 a medida.">
+    <meta property="og:title" content="Kyriom 3.0 — Tokenización de Activos Reales (RWA)">
+    <meta property="og:description" content="Llevamos activos del mundo real al mundo digital: RWA Tokenization, Kyriom Mint, Marketplace 3.0 y desarrollo de plataformas Web3.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyriom.com/servicios/web3.html">
+    <link rel="canonical" href="https://kyriom.com/servicios/web3.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .detail-services{padding:6rem 0}
+        .detail-services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+        .detail-card{padding:2.5rem;transition:all .4s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
+        .detail-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--btn-primary-bg),transparent);opacity:0;transition:opacity .4s}
+        .detail-card:hover::before{opacity:1}
+        .detail-card:hover{background:var(--card-hover);transform:translateY(-4px);border-color:var(--border-hover)}
+        .detail-card-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+        .detail-card h3{font-family:var(--font-primary);font-weight:700;font-size:1.2rem;margin-bottom:.75rem}
+        .detail-card p{font-size:.95rem;color:var(--text-secondary);line-height:1.75}
+        .tech-badge{font-family:var(--font-primary);font-size:.85rem;font-weight:500;padding:.55rem 1.2rem;border-radius:50px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-secondary);transition:all .3s;display:inline-block}
+        .tech-badge:hover{border-color:var(--border-hover);color:var(--text-primary)}
+        .assets-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+        .asset-card{padding:1.75rem 1.5rem;border-radius:18px;border:1px solid var(--border);background:var(--bg-secondary);transition:all .3s}
+        .asset-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
+        .asset-card h4{font-family:var(--font-primary);font-weight:700;font-size:1rem;margin:.9rem 0 .4rem}
+        .asset-card p{font-size:.85rem;color:var(--text-secondary);line-height:1.6;margin:0}
+        .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;position:relative}
+        .flow-step{padding:1.75rem 1.5rem;border-radius:18px;border:1px solid var(--border);background:var(--bg-secondary)}
+        .flow-num{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--font-primary);font-weight:700;font-size:.9rem;color:#fff;background:linear-gradient(135deg,var(--klein-blue),var(--vivid-sky));margin-bottom:1rem}
+        .flow-step h4{font-family:var(--font-primary);font-weight:700;font-size:1rem;margin-bottom:.45rem}
+        .flow-step p{font-size:.85rem;color:var(--text-secondary);line-height:1.6;margin:0}
+        .diff-band{margin-top:3rem;padding:2.5rem;border-radius:22px;background:linear-gradient(135deg,rgba(2,43,176,.07),rgba(73,211,248,.04));border:1px solid rgba(2,43,176,.15)}
+        .diff-band h3{font-family:var(--font-primary);font-weight:700;font-size:1.25rem;margin-bottom:.6rem}
+        .diff-band p{font-size:.95rem;color:var(--text-secondary);line-height:1.75;margin:0;max-width:62ch}
+        @media (max-width:900px){.assets-grid,.flow{grid-template-columns:repeat(2,1fr)}}
+        @media (max-width:768px){.detail-services-grid{grid-template-columns:1fr}.assets-grid,.flow{grid-template-columns:1fr}}
+    </style>
+    <style>
+        /* ===== WEB3 THEME — violet / cyan, glassmorphism ===== */
+        body.web3-theme{
+            --klein-blue:#7C4DFF;--azure:#8B5CF6;--vivid-sky:#49D3F8;--dark-blue:#4C1D95;
+            --bg-primary:#080B1A;--bg-secondary:rgba(255,255,255,.04);
+            --section-label-color:#C4B5FD;--badge-bg:rgba(124,77,255,.14);
+            --badge-border:rgba(124,77,255,.4);--badge-text:#DDD6FE;
+            --border:rgba(255,255,255,.12);--border-hover:rgba(167,139,250,.55);
+            --divider:rgba(139,92,246,.25);--grid-line:rgba(139,92,246,.07);
+            background:#080B1A;
+        }
+        body.web3-theme::before{
+            content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;
+            background:
+              radial-gradient(65% 55% at 85% -10%, rgba(124,77,255,.34) 0%, rgba(124,77,255,0) 60%),
+              radial-gradient(55% 50% at 5% 20%, rgba(73,211,248,.16) 0%, rgba(73,211,248,0) 60%),
+              radial-gradient(70% 60% at 50% 110%, rgba(76,29,149,.4) 0%, rgba(76,29,149,0) 65%);
+        }
+        body.web3-theme .hero-orb-1{background:radial-gradient(circle,rgba(124,77,255,.5),transparent 70%)}
+        body.web3-theme .hero-orb-2{background:radial-gradient(circle,rgba(73,211,248,.32),transparent 70%)}
+        /* glass surfaces */
+        body.web3-theme .glass,body.web3-theme .glass-strong,
+        body.web3-theme .asset-card,body.web3-theme .flow-step,
+        body.web3-theme .gpu-table,body.web3-theme .detail-card{
+            background:rgba(255,255,255,.055);
+            backdrop-filter:blur(22px) saturate(140%);
+            -webkit-backdrop-filter:blur(22px) saturate(140%);
+            border:1px solid rgba(255,255,255,.13);
+            box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 18px 46px rgba(5,6,20,.5);
+        }
+        body.web3-theme .detail-card:hover,body.web3-theme .asset-card:hover{
+            background:rgba(255,255,255,.085);border-color:rgba(167,139,250,.5);
+            box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 22px 60px rgba(124,77,255,.22);
+        }
+        body.web3-theme .detail-card::before{background:linear-gradient(90deg,transparent,#A78BFA,transparent)}
+        body.web3-theme .detail-card-icon{background:linear-gradient(135deg,rgba(124,77,255,.28),rgba(73,211,248,.14));border:1px solid rgba(167,139,250,.32)}
+        body.web3-theme .flow-num{background:linear-gradient(135deg,#7C4DFF,#49D3F8);box-shadow:0 8px 24px rgba(124,77,255,.4)}
+        body.web3-theme .service-tag{background:rgba(124,77,255,.12);border-color:rgba(167,139,250,.28);color:#DDD6FE}
+        body.web3-theme .tech-badge{background:rgba(255,255,255,.05);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.14);color:rgba(233,231,255,.82)}
+        body.web3-theme .tech-badge:hover{border-color:rgba(167,139,250,.6);color:#fff;background:rgba(124,77,255,.16)}
+        body.web3-theme .page-hero h1 .gradient-text,
+        body.web3-theme .section-title span{background:linear-gradient(120deg,#A78BFA 0%,#7C4DFF 45%,#49D3F8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+        body.web3-theme .diff-band{
+            background:linear-gradient(135deg,rgba(124,77,255,.16),rgba(73,211,248,.06));
+            backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+            border:1px solid rgba(167,139,250,.3);
+            box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 20px 60px rgba(76,29,149,.35);
+        }
+        body.web3-theme .cta-container{
+            background:linear-gradient(135deg,rgba(124,77,255,.18),rgba(73,211,248,.07));
+            backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);
+            border:1px solid rgba(167,139,250,.32);
+        }
+        body.web3-theme .btn-secondary{border-color:rgba(167,139,250,.45);color:#EDE9FE}
+        body.web3-theme .btn-secondary:hover{background:rgba(124,77,255,.16);border-color:rgba(167,139,250,.8)}
+        body.web3-theme .hero-badge-dot{background:#A78BFA;box-shadow:0 0 12px rgba(167,139,250,.8)}
+        body.web3-theme .section-divider{background:linear-gradient(90deg,transparent,rgba(139,92,246,.35),transparent)}
+        body.web3-theme .layer-tag{background:linear-gradient(135deg,#7C4DFF,#49D3F8)}
+        body.web3-theme .nav-logo .logo-dark{filter:brightness(0) invert(1)}
+        body.web3-theme #themeToggle{display:none}
+        body.web3-theme .page-hero h1{color:#F2F5FF}
+        body.web3-theme .page-hero p{color:rgba(226,232,255,.78)}
+        body.web3-theme .section-title{color:#F2F5FF}
+        body.web3-theme .section-subtitle{color:rgba(226,232,255,.72)}
+        body.web3-theme .detail-card h3,body.web3-theme .asset-card h4,body.web3-theme .flow-step h4,body.web3-theme .diff-band h3{color:#F2F5FF}
+    </style>
+    <script src="../i18n.js" defer></script>
+</head>
+<body class="dark web3-theme">
+
+<nav class="nav" id="nav">
+    <div class="container">
+        <a href="../index.html" class="nav-logo">
+            <img src="../Logo/Kyriom_Isologo-dark.svg" alt="Kyriom" class="logo-light">
+            <img src="../Logo/Kyriom_Isologo-white.svg" alt="Kyriom" class="logo-dark">
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-dropdown" id="navDropdown">
+                    <a href="../index.html#servicios" class="nav-dropdown-trigger">
+                        <span data-i18n="nav.services">Servicios</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="devops-cloud.html"><span class="dropdown-icon"><img src="../icons/cloud.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.devops">DevOps &amp; Cloud</span></a>
+                        <a href="ia-agentes.html"><span class="dropdown-icon"><img src="../icons/cpu.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.ia">IA &amp; Agentes</span></a>
+                        <a href="data-analytics.html"><span class="dropdown-icon"><img src="../icons/bar-chart-2.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.data">Data &amp; Analytics</span></a>
+                        <a href="finops.html"><span class="dropdown-icon"><img src="../icons/trending-up.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.finops">FinOps</span></a>
+                        <a href="Platformengineer.html"><span class="dropdown-icon"><img src="../icons/server.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.platform">Platform Engineering</span></a>
+                        <a href="Cloudsecurity.html"><span class="dropdown-icon"><img src="../icons/shield.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.security">Cloud Security</span></a>
+                        <a href="full-stack-ai.html"><span class="dropdown-icon"><img src="../icons/layers.svg" width="16" height="16" class="icon icon-adaptive" alt=""></span><span data-i18n="nav.services.fullstackai">Full Stack AI</span></a>
+                    </div>
+                </li>
+                <li><a href="../kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                <li><a href="web3.html" class="nav-web3" data-i18n="nav.web3">Web3</a></li>
+                <li><a href="../contacto.html" data-i18n="nav.contact">Contacto</a></li>
+            </ul>
+            <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang.toggle" aria-label="Cambiar idioma"><span data-lang-current>EN</span></button>
+            <button class="theme-toggle" id="themeToggle" data-i18n-aria="nav.theme.toggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </button>
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.menu.toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+        <div style="display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1rem">
+            <a href="../index.html#servicios" style="font-family:var(--font-primary);font-size:.8rem;color:var(--text-tertiary)" data-i18n="nav.services">Servicios</a>
+            <span style="color:var(--text-tertiary);font-size:.8rem">/</span>
+            <span style="font-family:var(--font-primary);font-size:.8rem;color:var(--text-secondary)" data-i18n="nav.services.web3">Kyriom Web3</span>
+        </div>
+        <div class="hero-badge reveal" style="margin-bottom:1.5rem">
+            <span class="hero-badge-dot"></span>
+            <span data-i18n="web3.hero.badge">Nuestra especialización de nicho</span>
+        </div>
+        <h1 class="reveal reveal-delay-1" data-i18n-html="web3.hero.title">Kyriom 3.0 <span class="gradient-text">Tokenización de<br>activos reales</span></h1>
+        <p class="reveal reveal-delay-2" data-i18n="web3.hero.desc">Llevamos activos del mundo real (RWA) al mundo digital: inmuebles, contratos, créditos y commodities. Con el mismo equipo que ya sostiene tu infraestructura cloud y on-premise.</p>
+        <div class="hero-actions reveal reveal-delay-3">
+            <a href="../contacto.html" class="btn-primary btn-chartreuse">
+                <span data-i18n="web3.hero.cta.primary">Hablar con un experto</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#productos" class="btn-secondary" data-i18n="web3.hero.cta.secondary">Ver la plataforma</a>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="detail-services" id="productos">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="web3.products.label">La plataforma</div>
+            <h2 class="section-title" data-i18n-html="web3.products.title">Cuatro piezas para<br>tokenizar de punta a punta</h2>
+            <p class="section-subtitle" data-i18n="web3.products.subtitle">Del activo físico al token transferible: emisión, comercialización y desarrollo de tu propia plataforma Web3, sobre infraestructura que ya operamos.</p>
+        </div>
+        <div class="detail-services-grid">
+            <div class="detail-card glass reveal">
+                <div class="detail-card-icon service-icon-cloud"><img src="../icons/layers.svg" width="24" height="24" class="icon icon-adaptive" alt=""></div>
+                <h3 data-i18n="web3.card1.title">RWA Tokenization</h3>
+                <p data-i18n="web3.card1.desc">Plataforma base para representar activos del mundo real como tokens digitales únicos, verificables y transferibles. Estructuramos el activo, definimos el estándar del token y dejamos trazabilidad completa de cada emisión y transferencia.</p>
+                <div class="service-tags" style="margin-top:1.25rem">
+                    <span class="service-tag">RWA</span>
+                    <span class="service-tag">Smart Contracts</span>
+                    <span class="service-tag">On-chain Registry</span>
+                    <span class="service-tag">Trazabilidad</span>
+                </div>
+            </div>
+            <div class="detail-card glass reveal reveal-delay-1">
+                <div class="detail-card-icon service-icon-ai"><img src="../icons/key.svg" width="24" height="24" class="icon icon-adaptive" alt=""></div>
+                <h3 data-i18n="web3.card2.title">Kyriom Mint</h3>
+                <p data-i18n="web3.card2.desc">Emisión de certificados, contratos, títulos y credenciales directamente sobre blockchain. Cada documento queda verificable de forma pública e inalterable, sin depender de un tercero que lo custodie.</p>
+                <div class="service-tags" style="margin-top:1.25rem">
+                    <span class="service-tag">Certificados</span>
+                    <span class="service-tag">Credenciales</span>
+                    <span class="service-tag">Verificación</span>
+                    <span class="service-tag">NFT / ERC-20</span>
+                </div>
+            </div>
+            <div class="detail-card glass reveal reveal-delay-2">
+                <div class="detail-card-icon service-icon-data"><img src="../icons/shopping-cart.svg" width="24" height="24" class="icon icon-adaptive" alt=""></div>
+                <h3 data-i18n="web3.card3.title">Kyriom Marketplace 3.0</h3>
+                <p data-i18n="web3.card3.desc">Tienda propia para tokenizar y comercializar activos, con pagos en fiat y cripto. Onboarding de compradores, gestión de inventario tokenizado y liquidación en el medio de pago que tu operación necesite.</p>
+                <div class="service-tags" style="margin-top:1.25rem">
+                    <span class="service-tag">Marketplace</span>
+                    <span class="service-tag">Fiat &amp; Cripto</span>
+                    <span class="service-tag">KYC / Onboarding</span>
+                    <span class="service-tag">White Label</span>
+                </div>
+            </div>
+            <div class="detail-card glass reveal reveal-delay-3">
+                <div class="detail-card-icon service-icon-devops"><img src="../icons/code-2.svg" width="24" height="24" class="icon icon-adaptive" alt=""></div>
+                <h3 data-i18n="web3.card4.title">Web3 Platform Development</h3>
+                <p data-i18n="web3.card4.desc">Co-creamos y desarrollamos tu propia plataforma Web3 usando nuestro marketplace white label, o diseñamos una solución a medida cuando el caso de uso lo requiere. Integrada a tus sistemas actuales, no como un silo aparte.</p>
+                <div class="service-tags" style="margin-top:1.25rem">
+                    <span class="service-tag">White Label</span>
+                    <span class="service-tag">Custom Build</span>
+                    <span class="service-tag">Integraciones</span>
+                    <span class="service-tag">APIs</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="diff-band reveal">
+            <h3 data-i18n="web3.diff.title">El mismo equipo que sostiene tu infraestructura</h3>
+            <p data-i18n="web3.diff.desc">La diferencia de Kyriom 3.0 no es el contrato inteligente: es quién lo opera. Diseñamos, desplegamos y mantenemos la plataforma sobre la misma base cloud y on-premise que ya gestionamos, con seguridad, observabilidad y soporte incluidos desde el día uno.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section style="padding:5rem 0">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="web3.assets.label">Qué se puede tokenizar</div>
+            <h2 class="section-title" data-i18n-html="web3.assets.title">Activos del mundo real,<br>representados on-chain</h2>
+        </div>
+        <div class="assets-grid">
+            <div class="asset-card glass reveal">
+                <img src="../icons/building.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="web3.asset1.title">Inmuebles</h4>
+                <p data-i18n="web3.asset1.desc">Fraccionamiento y transferencia de participaciones sobre propiedades y desarrollos.</p>
+            </div>
+            <div class="asset-card glass reveal reveal-delay-1">
+                <img src="../icons/book-open.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="web3.asset2.title">Contratos y títulos</h4>
+                <p data-i18n="web3.asset2.desc">Contratos, certificados y credenciales emitidos y verificables on-chain.</p>
+            </div>
+            <div class="asset-card glass reveal reveal-delay-2">
+                <img src="../icons/landmark.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="web3.asset3.title">Créditos</h4>
+                <p data-i18n="web3.asset3.desc">Carteras de crédito y flujos de cobro representados como instrumentos digitales.</p>
+            </div>
+            <div class="asset-card glass reveal reveal-delay-3">
+                <img src="../icons/globe.svg" width="26" height="26" class="icon icon-adaptive" alt="">
+                <h4 data-i18n="web3.asset4.title">Commodities</h4>
+                <p data-i18n="web3.asset4.desc">Producción y stock físico con trazabilidad de origen y transferencia de titularidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section style="padding:5rem 0">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="web3.flow.label">Cómo trabajamos</div>
+            <h2 class="section-title" data-i18n-html="web3.flow.title">Del activo físico<br>al token en producción</h2>
+        </div>
+        <div class="flow">
+            <div class="flow-step glass reveal">
+                <div class="flow-num">1</div>
+                <h4 data-i18n="web3.flow1.title">Estructuración</h4>
+                <p data-i18n="web3.flow1.desc">Definimos qué representa el token, cómo se respalda el activo y qué reglas rigen su transferencia.</p>
+            </div>
+            <div class="flow-step glass reveal reveal-delay-1">
+                <div class="flow-num">2</div>
+                <h4 data-i18n="web3.flow2.title">Emisión on-chain</h4>
+                <p data-i18n="web3.flow2.desc">Desarrollamos y auditamos los contratos, y emitimos sobre la red que mejor se ajuste al caso.</p>
+            </div>
+            <div class="flow-step glass reveal reveal-delay-2">
+                <div class="flow-num">3</div>
+                <h4 data-i18n="web3.flow3.title">Distribución</h4>
+                <p data-i18n="web3.flow3.desc">Publicamos en tu marketplace con onboarding de compradores y pagos en fiat o cripto.</p>
+            </div>
+            <div class="flow-step glass reveal reveal-delay-3">
+                <div class="flow-num">4</div>
+                <h4 data-i18n="web3.flow4.title">Operación</h4>
+                <p data-i18n="web3.flow4.desc">Operamos la plataforma: monitoreo, seguridad, evolución del producto y soporte continuo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section style="padding:5rem 0 6rem">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-label" data-i18n="web3.tech.label">Stack Web3</div>
+            <h2 class="section-title" data-i18n-html="web3.tech.title">Tecnologías que<br>dominamos</h2>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center" class="reveal">
+            <span class="tech-badge">Ethereum</span>
+            <span class="tech-badge">Polygon</span>
+            <span class="tech-badge">Cardano</span>
+            <span class="tech-badge">Solidity</span>
+            <span class="tech-badge">ERC-721</span>
+            <span class="tech-badge">ERC-1155</span>
+            <span class="tech-badge">ERC-3643</span>
+            <span class="tech-badge">Hardhat</span>
+            <span class="tech-badge">IPFS</span>
+            <span class="tech-badge">The Graph</span>
+            <span class="tech-badge">Chainlink</span>
+            <span class="tech-badge">Wallet Connect</span>
+            <span class="tech-badge">Fiat On-Ramp</span>
+            <span class="tech-badge">Stablecoins</span>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-container glass-strong reveal">
+            <div class="section-label" data-i18n="web3.cta.label">Empezá con Web3</div>
+            <h2 class="section-title" data-i18n-html="web3.cta.title">Tokenizá tu primer<br>activo con nosotros</h2>
+            <p class="section-subtitle" data-i18n="web3.cta.subtitle">Arrancamos con un caso acotado, lo llevamos a producción y a partir de ahí escalamos el modelo al resto de tu operación.</p>
+            <div class="cta-actions">
+                <a href="../contacto.html" class="btn-primary btn-chartreuse">
+                    <span data-i18n="web3.cta.primary">Hablar con un experto</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../index.html#servicios" class="btn-secondary" data-i18n="web3.cta.secondary">Ver todos los servicios</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo"><img src="../Logo/kyriom_logo_white.png" alt="Kyriom"></div>
+                <p data-i18n="footer.tagline">Tu socio de confianza tecnológico. Aceleramos la transformación digital a través de cloud, inteligencia artificial y Web3.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services">Servicios</h4>
+                <ul>
+                    <li><a href="devops-cloud.html" data-i18n="nav.services.devops">DevOps &amp; Cloud</a></li>
+                    <li><a href="ia-agentes.html" data-i18n="nav.services.ia">IA &amp; Agentes</a></li>
+                    <li><a href="data-analytics.html" data-i18n="nav.services.data">Data &amp; Analytics</a></li>
+                    <li><a href="finops.html" data-i18n="nav.services.finops">FinOps</a></li>
+                    <li><a href="Platformengineer.html" data-i18n="nav.services.platform">Platform Engineering</a></li>
+                    <li><a href="Cloudsecurity.html" data-i18n="nav.services.security">Cloud Security</a></li>
+                    <li><a href="full-stack-ai.html" data-i18n="nav.services.fullstackai">Full Stack AI</a></li>
+                    <li><a href="web3.html" data-i18n="nav.services.web3">Kyriom Web3</a></li>
+                    <li><a href="../kyra.html" data-i18n="nav.kyra">Kyra</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <ul>
+                    <li><a href="../index.html#verticales" data-i18n="footer.company.verticals">Verticales</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">Empleos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">Contacto</h4>
+                <ul>
+                    <li><a href="../contacto.html" data-i18n="footer.contact.us">Contáctanos</a></li>
+                    <li><a href="mailto:hello@kyriom.com">hello@kyriom.com</a></li>
+                    <li><a href="https://www.linkedin.com/company/kyriom" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/kyriom_cloud/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.rights">&copy; 2026 Kyriom. Todos los derechos reservados.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/kyriom" class="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="../icons/linkedin.svg" width="16" height="16" class="icon icon-social" alt="LinkedIn"></a>
+                <a href="#" class="footer-social" aria-label="X" target="_blank" rel="noopener"><img src="../icons/x.svg" width="16" height="16" class="icon icon-social" alt="X"></a>
+                <a href="https://www.instagram.com/kyriom_cloud/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><img src="../icons/instagram.svg" width="16" height="16" class="icon icon-social" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.body.classList.add('dark');
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 50); }, { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll("a").forEach(link => { link.addEventListener("click", () => navLinks.classList.remove("open")); });
+    const navDropdown = document.getElementById("navDropdown");
+    if (navDropdown) {
+        navDropdown.querySelector(".nav-dropdown-trigger").addEventListener("click", function(e) {
+            if (window.innerWidth <= 768) { e.preventDefault(); navDropdown.classList.toggle("open"); }
+        });
+        document.addEventListener("click", function(e) { if (!navDropdown.contains(e.target)) navDropdown.classList.remove("open"); });
+    }
+</script>
+</body>
+</html>

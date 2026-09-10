@@ -1752,3 +1752,13 @@ h1.reveal.visible, h2.reveal.visible, h3.reveal.visible, .section-title.reveal.v
 .dark .icon-adaptive {
     filter: brightness(0) invert(1);
 }
+
+/* Footer socials: always white glyphs on the dark footer */
+.footer-social .icon-social{filter:brightness(0) invert(1);opacity:.75;transition:opacity .3s}
+.footer-social:hover .icon-social{opacity:1}
+.footer-logo img{height:46px;width:auto}
+
+/* Web3 — top-level nav emphasis */
+.nav-links .nav-web3{position:relative}
+.nav-links .nav-web3::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:linear-gradient(90deg,#7C4DFF,#49D3F8);opacity:0;transition:opacity .3s}
+.nav-links .nav-web3:hover::after{opacity:1}
